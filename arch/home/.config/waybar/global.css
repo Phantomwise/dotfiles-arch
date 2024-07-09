@@ -1,0 +1,68 @@
+/*
+███████████████████████████████████████████████████████████████╗
+█╔════════════════════════════════════════════════════════════█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░██╗░░░░██╗░█████╗░██╗░░░██╗██████╗░░█████╗░██████╗░░░░░░█║
+█║░░░░██║░░░░██║██╔══██╗╚██╗░██╔╝██╔══██╗██╔══██╗██╔══██╗░░░░░█║
+█║░░░░██║░█╗░██║███████║░╚████╔╝░██████╔╝███████║██████╔╝░░░░░█║
+█║░░░░██║███╗██║██╔══██║░░╚██╔╝░░██╔══██╗██╔══██║██╔══██╗░░░░░█║
+█║░░░░╚███╔███╔╝██║░░██║░░░██║░░░██████╔╝██║░░██║██║░░██║░░░░░█║
+█║░░░░░╚══╝╚══╝░╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░ Waybar configuration ░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░ Global CSS variables ░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░ Ioke theme ░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░ by Phantomwise ░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░ ~/.config/waybar/global.css ░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+███████████████████████████████████████████████████████████████║
+╚══════════════════════════════════════════════════════════════╝
+*/
+
+/* global.css */
+
+/*
+@import 'global.css';
+*/
+
+@define-color color-test rgb (255, 0, 0);
+@define-color color-test1 rgb (255, 0, 0);
+@define-color color-test2 rgb (255, 255, 0);
+@define-color color-test3 rgb (0, 255, 0);
+@define-color color-test4 rgb (0, 255, 255);
+@define-color color-test5 rgb (0, 0, 255);
+
+/* Alt 1 White text */
+@define-color color-light rgb (0, 75, 170);
+/* 
+@define-color color-light rgb (0, 45, 100);
+*/
+@define-color color-dark rgb (0, 0, 0);
+@define-color color-text-on-light rgb (255, 255, 255);
+@define-color color-text-on-dark rgb (255, 255, 255);
+/*
+@define-color color-pink rgb (160, 0, 53);
+@define-color color-blue rgb (0, 128, 255);
+*/
+
+/* Alt 2 Inverted colors */
+/*
+@define-color color-light rgb (255, 187, 0);
+@define-color color-dark rgb (0, 0, 0);
+@define-color color-text-on-light rgb (0, 0, 0);
+@define-color color-text-on-dark rgb (255, 187, 0);
+*/
+
+/* Other colors */
+@define-color color-text-light rgb (255, 255, 0);
+@define-color color-highlight rgb (255, 255, 0);
+@define-color color-urgent rgb (255, 0, 0);
+/*
+*/
+
+/* Colors */
+/*
+@define-color yellow rgb (255, 187, 0);
+@define-color pink rgb (255, 0, 85);
+*/

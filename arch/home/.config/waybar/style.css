@@ -1,0 +1,212 @@
+/*
+███████████████████████████████████████████████████████████████╗
+█╔════════════════════════════════════════════════════════════█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░██╗░░░░██╗░█████╗░██╗░░░██╗██████╗░░█████╗░██████╗░░░░░░█║
+█║░░░░██║░░░░██║██╔══██╗╚██╗░██╔╝██╔══██╗██╔══██╗██╔══██╗░░░░░█║
+█║░░░░██║░█╗░██║███████║░╚████╔╝░██████╔╝███████║██████╔╝░░░░░█║
+█║░░░░██║███╗██║██╔══██║░░╚██╔╝░░██╔══██╗██╔══██║██╔══██╗░░░░░█║
+█║░░░░╚███╔███╔╝██║░░██║░░░██║░░░██████╔╝██║░░██║██║░░██║░░░░░█║
+█║░░░░░╚══╝╚══╝░╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░ Waybar configuration ░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░ CSS theme configuration ░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░ Ioke theme ░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░ by Phantomwise ░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░ ~/.config/waybar/style.css ░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+███████████████████████████████████████████████████████████████║
+╚══════════════════════════════════════════════════════════════╝
+*/
+
+* {
+	font-size: 16px;
+	font-family: dungeon;
+	/*
+	font-family: Terminess Nerd Font Mono;
+	font-family: ProFont IIx Nerd Font Mono;
+	font-family: dungeon;
+	*/
+	/*
+	font-family: ProFont IIx Nerd Font Mono;
+	font-family: monospace;
+	*/
+	padding: 0 0px;
+	min-height: 0;
+}
+
+@import url("/home/phantomwise/.config/global.css");
+
+/* Color testing */
+/*
+test {
+	color: white;
+	color: rgb(160, 0, 53)
+}
+*/
+
+window#waybar {
+    background-color: transparent;
+}
+
+#workspaces button {
+	padding: 0 0px;
+	color: @color-text-on-light;
+	border-radius: 0px
+}
+
+#workspaces button:hover {
+	box-shadow: none; /* Remove predefined box-shadow */
+	text-shadow: none; /* Remove predefined text-shadow */
+	background: none; /* Remove predefined background color (white) */
+	transition: none; /* Disable predefined animations */
+	padding: 0 2px;
+	color: @color-text-on-dark;
+	background-color: @color-dark;
+}
+
+#workspaces button.active {
+	/*
+	border-top: 2px solid @color-text-on-light;
+	*/
+	color: @color-text-on-light;
+	background-color: @color-light;
+}
+
+#workspaces button.urgent {
+	color: @color-urgent;
+}
+
+/*
+#workspaces
+#workspaces button
+#workspaces button.active
+#workspaces button.visible
+#workspaces button.urgent
+#workspaces button.empty
+#workspaces button.persistent
+#workspaces button.hidden
+*/
+
+#custom-arch {
+	font-size: 18px;
+	padding: 0 5px;
+}
+
+#clock.hour,
+#clock.day,
+#clock.date,
+#window.class,
+#window.title,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#disk,
+#network,
+#pulseaudio,
+#language {
+	padding: 0 5px;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk {
+	min-width: 40px
+}
+
+/*
+#window {
+	padding: 0 5px
+}
+#clock {
+	padding: 0 5px
+}
+*/
+
+#clock.day,
+#clock.date,
+#workspaces,
+#window.title,
+#battery,
+#cpu,
+#disk,
+#pulseaudio,
+#tray {
+	color: @color-text-on-dark;
+	background-color: @color-dark;
+}
+#custom-arch,
+#clock.hour,
+#window.class,
+#temperature,
+#memory,
+#network,
+#language {
+	color: @color-text-on-light;
+	background-color: @color-light;
+}
+
+/*
+*/
+
+#custom-left-arrow-light-dark,
+#custom-right-arrow-dark-light,
+#custom-left-arrow-dark-light,
+#custom-right-arrow-light-dark,
+#custom-left-arrow-transparent-dark,
+#custom-right-arrow-dark-transparent,
+#custom-left-arrow-transparent-light,
+#custom-right-arrow-light-transparent,
+#custom-left-arrow-dark-transparent,
+#custom-right-arrow-transparent-dark,
+#custom-left-arrow-light-transparent,
+#custom-right-arrow-transparent-light {
+	font-size: 18px;
+}
+
+#custom-left-arrow-light-dark,
+#custom-right-arrow-dark-light {
+	color: @color-dark;
+	background-color: @color-light;
+}
+#custom-left-arrow-dark-light,
+#custom-right-arrow-light-dark {
+	color: @color-light;
+	background-color: @color-dark;
+}
+
+#custom-left-arrow-transparent-dark,
+#custom-right-arrow-dark-transparent {
+	color: @color-dark;
+	background: transparent;
+}
+#custom-left-arrow-transparent-light,
+#custom-right-arrow-light-transparent {
+	color: @color-light;
+	background: transparent;
+}
+#custom-left-arrow-dark-transparent,
+#custom-right-arrow-transparent-dark {
+	color: transparent;
+	background: @color-dark;
+}
+#custom-left-arrow-light-transparent,
+#custom-right-arrow-transparent-light {
+	color: transparent;
+	background: @color-light;
+}
+
+/*
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: #1a1a1a;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: #292b2e;
+	background: #1a1a1a;
+}
+*/
