@@ -5,29 +5,27 @@ This is my attempt to use stow, git and github to organise my config files, as t
 Currently included :
 - Shell :
   - bash
-  - [Zsh](#zsh)
+  - zsh
 - Applications :
-  - kitty
-  - fastfetch
-  - neofetch *(outdated, I switched to fastfetch)*
+  - Waybar
+  - Kitty
+  - Fastfetch
+  - Neofetch *(outdated)*
 - Other stuff :
   - /etc/issue
 
 Not yet included :
-- hyprland
-- waybar
-- rofi-wayland
-- sway-img
+- Hyprland
+- Rofi-Wayland
+- Sway-img
 - Scripts
 
 Not yet configured I really should get around to doing it :
-- mako
-- sway
-- niri
+- Mako
+- Sway
+- Niri
 
 I will definitely blather about my config later because NO ONE CAN STOP ME IT'S MY REPO MUAHAHAAAAH
 But right now I'm just trying to get everything working =)
-
-## Zsh
 
 [...]
