@@ -5,7 +5,7 @@ This is my attempt to use stow, git and github to organise my config files, as t
 Currently included :
 - Shell :
   - bash
-  - zsh
+  - [zsh](#zsh)
 - Applications :
   - kitty
   - fastfetch
@@ -27,3 +27,5 @@ Not yet configured I really should get around to doing it :
 
 I will definitely blather about my config later because NO ONE CAN STOP ME IT'S MY REPO MUAHAHAAAAH
 But right now I'm just trying to get everything working =)
+
+## Zsh {#zsh}
