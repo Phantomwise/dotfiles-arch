@@ -151,7 +151,11 @@ SAVEHIST=10000
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-export PATH="$PATH:$HOME/Scripts"
+# Add ~/Scripts to PATH if it's not already there
+# NB: Having export PATH="$PATH:$HOME/Scripts" in both bashrc and zshrc causes it to be added twice in $PATH, usinng this instead avoids duplication :
+if ! echo "$PATH" | grep -q "$HOME/Scripts"; then
+    export PATH="$PATH:$HOME/Scripts"
+fi
 
 # ███████████████████████████████████████████████████████████████╗
 # █╔════════════════════════════════════════════════════════════█║
