@@ -95,10 +95,10 @@ fi
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-# Add ~/Scripts to PATH if it's not already there
-# NB: Having export PATH="$PATH:$HOME/Scripts" in both bashrc and zshrc causes it to be added twice in $PATH, usinng this instead avoids duplication :
-if ! echo "$PATH" | grep -q "$HOME/Scripts"; then
-    export PATH="$PATH:$HOME/Scripts"
+# Separate config to add directories to $PATH in both bashrc and zshrc if they are not already there. Avoids duplicate entries in $PATH.
+# Sourced by both bashrc and zshrc
+if [ -f "$HOME/.config/shell/path-config" ]; then
+    source "$HOME/.config/shell/path-config"
 fi
 
 # ███████████████████████████████████████████████████████████████╗

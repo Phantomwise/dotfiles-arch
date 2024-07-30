@@ -1,0 +1,16 @@
+# ~/.config/shell/path-config
+
+# Function to add directories to PATH if not already present
+add_to_path() {
+    local dir
+    for dir in "$@"; do
+        # Check if the directory is already in PATH
+        case ":$PATH:" in
+            *":$dir:"*) :;;  # Already in PATH
+            *) PATH="$dir:$PATH" ;;  # Add directory to PATH
+        esac
+    done
+}
+
+# Add desired directories
+add_to_path "$HOME/Scripts" "$HOME/.local/bin" "$HOME/.local/bin/scripts"
