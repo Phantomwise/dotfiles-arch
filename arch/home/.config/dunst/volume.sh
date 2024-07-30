@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Originally from Eric Murphy :
+# https://github.com/ericmurphyxyz/dotfiles/blob/master/.local/bin/volume
+# Modified a bit
+
 # Define the path to your icons
 ICON_PATH="$HOME/.local/share/icons/svg"
 
@@ -40,7 +44,7 @@ send_notification() {
         TEXT="Currently at ${PERCENT}%"
     fi
 
-    dunstify -a "Volume" -r 9993 -h int:value:"$PERCENT" -i "$ICON_PATH/volume-$ICON.svg" "Volume" "$TEXT" -t 2000
+    dunstify -a "Volume" -r 118111108 -h int:value:"$PERCENT" -i "$ICON_PATH/volume-$ICON.svg" "Volume" "$TEXT" -t 2000
 }
 
 send_notification
