@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Source : https://github.com/ericmurphyxyz/dotfiles/blob/master/.local/bin/battery-charging
+
 # Send a notification when the laptop is plugged in/unplugged
 # Add the following to /etc/udev/rules.d/60-power.rules (replace USERNAME with your user)
 
