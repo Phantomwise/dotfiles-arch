@@ -254,7 +254,7 @@
     ignore_newline = no
 
     # Stack together notifications with the same content
-    stack_duplicates = true
+    stack_duplicates = false
 
     # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
@@ -473,6 +473,29 @@
 #░█║░░░░░░░░░░░░░░░░░░░░░░░░░ OVERRIDE ░░░░░░░░░░░░░░░░░░░░░░░░░█║
 #░███████████████████████████████████████████████████████████████║
 #░╚══════════════════════════════════════════════════════════════╝
+
+[change-format-dunstify]
+
+        appname = dunstify
+        format = "<b>%s</b>\n<i>%b</i>\n<i>TEST dunstify</i>"
+
+[change-format-volume]
+
+        appname = Volume
+        format = "<b>%s</b>\ntest\n<i>%b\nTEST Volume</i>"
+
+[change-format-discord]
+        desktop_entry = Discord
+        default_icon = ~/.local/share/icons/svg/apps/discord-white.svg
+
+[change-format-firefox]
+        desktop_entry = Firefox
+        default_icon = ~/.local/share/icons/svg/apps/firefox-white.svg
+
+# Testing
+[change-format-firefoxwb]
+        desktop_entry = 'Firefox Web Browser'
+        default_icon = ~/.local/share/icons/svg/apps/firefox-black.svg
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
