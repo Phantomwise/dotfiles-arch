@@ -26,12 +26,14 @@
 @import 'global.css';
 */
 
-@define-color color-test rgb (255, 0, 0);
-@define-color color-test1 rgb (255, 0, 0);
-@define-color color-test2 rgb (255, 255, 0);
-@define-color color-test3 rgb (0, 255, 0);
-@define-color color-test4 rgb (0, 255, 255);
-@define-color color-test5 rgb (0, 0, 255);
+/*
+@define-color color-red rgb (255, 0, 0);
+@define-color color-green rgb (0, 255, 0);
+@define-color color-blue rgb (0, 0, 255);
+@define-color color-yellow rgb (255, 255, 0);
+@define-color color-cyan rgb (0, 255, 255);
+@define-color color-magenta rgb (255, 0, 255);
+*/
 
 /* Alt 1 White text */
 @define-color color-light rgb (0, 75, 170);
