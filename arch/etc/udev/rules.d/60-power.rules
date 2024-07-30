@@ -1,0 +1,2 @@
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/john/.Xauthority" RUN+="/usr/bin/su john -c '/home/phantomwise/.local/bin/scripts/battery-charging.sh discharging'"
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/john/.Xauthority" RUN+="/usr/bin/su john -c '/home/phantomwise/.local/bin/scripts/battery-charging.sh charging'"
