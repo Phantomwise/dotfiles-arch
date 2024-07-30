@@ -20,51 +20,61 @@
 ╚══════════════════════════════════════════════════════════════╝
 */
 
-/* global.css */
-
-/*
+/* To use :
 @import 'global.css';
 */
 
 /*
-@define-color color-red rgb (255, 0, 0);
-@define-color color-green rgb (0, 255, 0);
-@define-color color-blue rgb (0, 0, 255);
-@define-color color-yellow rgb (255, 255, 0);
-@define-color color-cyan rgb (0, 255, 255);
-@define-color color-magenta rgb (255, 0, 255);
+███████████████████████████████████████████████████████████████╗
+█╔════════════════════════════════════════════════════════════█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░ COLORS ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+███████████████████████████████████████████████████████████████║
+╚══════════════════════════════════════════════════════════════╝
 */
 
-/* Alt 1 White text */
-@define-color color-light rgb (0, 75, 170);
-/* 
-@define-color color-light rgb (0, 45, 100);
-*/
-@define-color color-dark rgb (0, 0, 0);
-@define-color color-text-on-light rgb (255, 255, 255);
-@define-color color-text-on-dark rgb (255, 255, 255);
+@define-color color-white #ffffff;
+@define-color color-black #000000;
+@define-color color-red #ff0000;
+@define-color color-green #00ff00;
+@define-color color-blue #0000ff;
+@define-color color-yellow #ffff00;
+@define-color color-cyan #00ffff;
+@define-color color-magenta #ff00ff;
+
+/* Dark Yellow #ffbb00 */
+@define-color color-yellow-dark #ffbb00;
+/* Dark Red #a10000 */
+@define-color color-red-dark #a10000;
+/* Dark Blue #004BAA */
+@define-color color-blue-dark #004BAA;
+
 /*
-@define-color color-pink rgb (160, 0, 53);
-@define-color color-blue rgb (0, 128, 255);
+███████████████████████████████████████████████████████████████╗
+█╔════════════════════════════════════════════════════════════█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░ VARIABLE COLORS ░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+███████████████████████████████████████████████████████████████║
+╚══════════════════════════════════════════════════════════════╝
 */
 
-/* Alt 2 Inverted colors */
-/*
-@define-color color-light rgb (255, 187, 0);
-@define-color color-dark rgb (0, 0, 0);
-@define-color color-text-on-light rgb (0, 0, 0);
-@define-color color-text-on-dark rgb (255, 187, 0);
-*/
+/* Main color */
+@define-color color-main #004BAA;
 
-/* Other colors */
-@define-color color-text-light rgb (255, 255, 0);
-@define-color color-highlight rgb (255, 255, 0);
-@define-color color-urgent rgb (255, 0, 0);
-/*
-*/
+/* Highlight color */
+@define-color color-highlight #ffbb00;
 
-/* Colors */
+/* Urgent color */
+@define-color color-urgent #a10000;
+
 /*
-@define-color yellow rgb (255, 187, 0);
-@define-color pink rgb (255, 0, 85);
+███████████████████████████████████████████████████████████████╗
+█╔════════════════════════════════════════════════════════════█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░ END ░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+█║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+███████████████████████████████████████████████████████████████║
+╚══════════════════════════════════════════════════════════════╝
 */

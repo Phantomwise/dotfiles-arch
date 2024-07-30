@@ -36,14 +36,11 @@
 	min-height: 0;
 }
 
-@import url("/home/phantomwise/.config/global.css");
-
-/* Color testing */
+@import 'global.css';
 /*
-test {
-	color: white;
-	color: rgb(160, 0, 53)
-}
+Replaces
+@import url("/home/phantomwise/.config/global.css");
+seems to work
 */
 
 window#waybar {
@@ -52,7 +49,7 @@ window#waybar {
 
 #workspaces button {
 	padding: 0 0px;
-	color: @color-text-on-light;
+	color: @color-white;
 	border-radius: 0px
 }
 
@@ -62,16 +59,16 @@ window#waybar {
 	background: none; /* Remove predefined background color (white) */
 	transition: none; /* Disable predefined animations */
 	padding: 0 2px;
-	color: @color-text-on-dark;
-	background-color: @color-dark;
+	color: @color-white;
+	background-color: @color-black;
 }
 
 #workspaces button.active {
 	/*
 	border-top: 2px solid @color-text-on-light;
 	*/
-	color: @color-text-on-light;
-	background-color: @color-light;
+	color: @color-white;
+	background-color: @color-main;
 }
 
 #workspaces button.urgent {
@@ -135,8 +132,8 @@ window#waybar {
 #disk,
 #pulseaudio,
 #tray {
-	color: @color-text-on-dark;
-	background-color: @color-dark;
+	color: @color-white;
+	background-color: @color-black;
 }
 #custom-arch,
 #clock.hour,
@@ -145,8 +142,8 @@ window#waybar {
 #memory,
 #network,
 #language {
-	color: @color-text-on-light;
-	background-color: @color-light;
+	color: @color-white;
+	background-color: @color-main;
 }
 
 /*
@@ -169,34 +166,34 @@ window#waybar {
 
 #custom-left-arrow-light-dark,
 #custom-right-arrow-dark-light {
-	color: @color-dark;
-	background-color: @color-light;
+	color: @color-black;
+	background-color: @color-main;
 }
 #custom-left-arrow-dark-light,
 #custom-right-arrow-light-dark {
-	color: @color-light;
-	background-color: @color-dark;
+	color: @color-main;
+	background-color: @color-black;
 }
 
 #custom-left-arrow-transparent-dark,
 #custom-right-arrow-dark-transparent {
-	color: @color-dark;
+	color: @color-black;
 	background: transparent;
 }
 #custom-left-arrow-transparent-light,
 #custom-right-arrow-light-transparent {
-	color: @color-light;
+	color: @color-main;
 	background: transparent;
 }
 #custom-left-arrow-dark-transparent,
 #custom-right-arrow-transparent-dark {
 	color: transparent;
-	background: @color-dark;
+	background: @color-black;
 }
 #custom-left-arrow-light-transparent,
 #custom-right-arrow-transparent-light {
 	color: transparent;
-	background: @color-light;
+	background: @color-main;
 }
 
 /*
