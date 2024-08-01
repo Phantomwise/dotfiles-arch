@@ -144,7 +144,7 @@ Icon fonts :
 			"on-click-right": "mode",
 			"on-scroll-up": "tz_up",
 			"on-scroll-down": "tz_down"
-}
+			}
 	},
 
 	"clock#date": {
