@@ -176,6 +176,9 @@ fi
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
+# Set a variable with the prefered emulator
+export TERMINAL="kitty"
+
 # Set ksshaskpass for askpass because the regular sshaskpass package is X11 only >_<
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
