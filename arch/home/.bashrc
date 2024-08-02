@@ -55,6 +55,11 @@ PS1='\[\e[30;48;5;201m\]\[\e[1m\]\t\[\e[0;38;5;201;40m\]\[\e[30;48;5;55m\]
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
+# Bypass the issue causing the current directory to be '/home/phantomwise/git/dotfiles/arch' instead of '/home/phantomwise/'
+# To do: Find what is causing this and pix it.
+# NB: Maybe GNU Stow? '/home/phantomwise/git/dotfiles/arch/home' is symlinked to '~' with Stow.
+cd ~
+
 # Autostart neofetch
 # neofetch
 neofetch --ascii $HOME/.config/neofetch/logo/archlogo-var.txt
