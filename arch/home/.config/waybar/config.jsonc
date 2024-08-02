@@ -225,17 +225,26 @@ Icon fonts :
 			"",
 			""
 		],
-		"on-click": "kitty \"upower --dump\""
-		/* NOT WORKING... It opens a terminal that is instantly closed. Whyyyyyyyyyyy ? T_T
-		"on-click": "kitty upower --dump"
-			==> Opens a kitty window that is instantly closed.
-		"on-click": "kitty 'upower --dump'"
-			==> Opens a kitty window with this error :
-				Failed to launch child: upower --dump
-				With error: No such file or directory
-				Press Enter or Esc to exit
-		"on-click": "kitty \"upower --dump\""
-			==> Same as the previous one
+		"on-click": "kitty sh -c 'upower --dump; read -p \"Press Enter to exit\"'"
+
+		/*
+		NOT WORKING...
+			"on-click": "kitty upower --dump"
+			"on-click": "kitty sh -c 'upower --dump'"
+			"on-click": "kitty bash -c 'upower --dump'"
+				==> Opens a kitty window that is instantly closed.
+			"on-click": "kitty 'upower --dump'"
+			"on-click": "kitty \"upower --dump\""
+			"on-click": "kitty upower\\ --dump"
+				==> Opens a kitty window with this error :
+					Failed to launch child: upower --dump
+					With error: No such file or directory
+					Press Enter or Esc to exit
+		WORKING
+			"on-click": "kitty -e sh -c 'upower --dump; read -p \"Press Enter to exit\"'"
+			"on-click": "kitty sh -c 'upower --dump; read -p \"Press Enter to exit\"'"
+			"on-click": "kitty sh -c 'upower --dump; echo Press Enter to exit; read'"
+				==> Whooohoo that works
 		*/
 	},
 	
