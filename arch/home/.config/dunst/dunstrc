@@ -474,6 +474,17 @@ fi
     # Icon for notifications with critical urgency, uncomment to enable
     default_icon = warning-white
     # default_icon = warning-red-dark
+    script = "/home/phantomwise/.config/dunst/play-sound-critical.sh"
+        # NB: Needs absolute path, '~' and '$HOME' not working
+        # NB: Several hours wasted and I still can't run a script with arguments in dunst. Giving up, try again later.
+        # NOW WORKING !!!
+            # script = "/home/phantomwise/.config/dunst/play-one-sound.sh"
+        # WORKING
+            # script = test.sh
+            # script = "/home/phantomwise/Scripts/test.sh"
+            # script = "/home/phantomwise/.config/dunst/test.sh"
+        # NOT WORKING
+            # script = "/home/phantomwise/.config/dunst/play-sound.sh /home/phantomwise/.local/share/sounds/wav/orchestral/mixkit-threatening-orchestra-trumpets-2284.wav"
 
 #░███████████████████████████████████████████████████████████████╗
 #░█╔════════════════════════════════════════════════════════════█║
