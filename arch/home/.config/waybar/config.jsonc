@@ -245,7 +245,14 @@ Icon fonts :
 			"on-click": "kitty sh -c 'upower --dump; read -p \"Press Enter to exit\"'"
 			"on-click": "kitty sh -c 'upower --dump; echo Press Enter to exit; read'"
 				==> Whooohoo that works
-		*/
+		Failing to make it work without specifying 'kitty', and using $TERMINAL defined in bashrc & zshrc instead
+			"on-click": "~/Scripts/run-in-terminal-wip.sh 'upower --dump; read -p \"Press Enter to exit\"'"
+			"on-click": "~/Scripts/run-in-terminal-wip.sh 'upower --dump; read -p \"Press Enter to exit\"'"
+				==> Does absolutely nothing, even though the script works when run in the terminal
+		TEMP solution
+			"on-click": "kitty sh -c 'upower --dump; read -p \"Press Enter to exit\"'"
+				==> Good enugh for now
+				*/
 	},
 	
 	"temperature": {
