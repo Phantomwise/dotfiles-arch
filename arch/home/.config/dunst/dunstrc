@@ -484,6 +484,8 @@ fi
             # script = "/home/phantomwise/.config/dunst/test.sh"
         # NOT WORKING
             # script = "/home/phantomwise/.config/dunst/play-sound.sh /home/phantomwise/.local/share/sounds/wav/orchestral/mixkit-threatening-orchestra-trumpets-2284.wav"
+        # Links
+            # https://github.com/dunst-project/dunst/issues/257
 
 #░███████████████████████████████████████████████████████████████╗
 #░█╔════════════════════════════════════════════════════════════█║
