@@ -211,13 +211,30 @@ Icon fonts :
 	*/
 
 	"hyprland/window#class": {
-		"format": "{class}"
-
+		"format": "{class}",
+		"on-click-middle": "hyprctl dispatch killactive",
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
+		/*
+		Focus to the next window in the workspace
+		NB: Not usable because the mouse is moved when changing focus.
+		"on-scroll-up": "hyprctl dispatch cyclenext prev",
+		"on-scroll-down": "hyprctl dispatch cyclenext"
+		*/
 	},
 
 	"hyprland/window#title": {
 		"format": "{title}",
-		"max-length" : 30
+		"max-length" : 30,
+		"on-click-middle": "hyprctl dispatch killactive",
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
+		/*
+		Focus to the next window in the workspace
+		NB: Not usable because the mouse is moved when changing focus.
+		"on-scroll-up": "hyprctl dispatch cyclenext prev",
+		"on-scroll-down": "hyprctl dispatch cyclenext"
+		*/
 	},
 
 	/*
