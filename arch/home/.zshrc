@@ -73,9 +73,10 @@ RPROMPT="%K{black}%F{26}%f%k%B%K{26}%F{white}%*%f%k%b%K{26}%F{black}%f%k%K
 # ╚══════════════════════════════════════════════════════════════╝
 
 # Bypass the issue causing the current directory to be '/home/phantomwise/git/dotfiles/arch' instead of '/home/phantomwise/'
-# To do: Find what is causing this and pix it.
-# NB: Maybe GNU Stow? '/home/phantomwise/git/dotfiles/arch/home' is symlinked to '~' with Stow.
-cd ~
+    # To do: Find what is causing this and pix it.
+        # NB: Maybe GNU Stow? '/home/phantomwise/git/dotfiles/arch/home' is symlinked to '~' with Stow.
+    # Calling it a feature and commenting out the fix
+# cd ~
 
 # Check if running in a terminal emulator
 # NB: Change the check to look at $XDG_SESSION_TYPE = tty instead ?)
