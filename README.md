@@ -1,4 +1,10 @@
-# Readme
+```
+╔═══╗              ╓            
+║   ║              ║            
+╠══╦╝ ╔══╗ ╒══╗ ╔══╣ ╔═╦═╗ ╔══╗ 
+║  ╚╗ ╠══╝ ╔══╣ ║  ║ ║ ║ ║ ╠══╝ 
+╜   ╙ ╚══╛ ╚══╝ ╚══╝ ╜ ╙ ╙ ╚══╛ 
+```
 
 This is my attempt to use stow, git and github to organise my config files, hopefully it'll be less of a mess this way ^_^"
 
