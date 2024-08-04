@@ -25,7 +25,7 @@ Everything Wayland only because I hate myself.
   - ✅ **[Kitty](https://sw.kovidgoyal.net/kitty/)** : terminal emulator
   - 🗑️ ~~[Mako](https://github.com/emersion/mako)~~ : notification daemon *(outdated, replaced by dunst)*
   - 🗑️ ~~[Neofetch](https://github.com/dylanaraps/neofetch)~~ : fetch *(outdated, replaced by fastfetch)*
-  - ✅ **[Rofi lbonn Wayland fork](https://github.com/lbonn/rofi)** : app launcher / everything menu maker
+  - ✅ **[Rofi lbonn Wayland fork](https://github.com/lbonn/rofi)** : app launcher / everything launch menu / rofi is great rofi is awesome rofi is god
   - ✅ **[Swayimg](https://github.com/artemsen/swayimg)** : image viewer
   - ✅ **[VSCodium](https://github.com/VSCodium/vscodium)** : code editor
   - ✅ **[Waybar](https://github.com/Alexays/Waybar)** : bar
