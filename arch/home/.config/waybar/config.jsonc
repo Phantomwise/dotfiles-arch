@@ -248,19 +248,16 @@ Icon fonts :
 
 	"hyprland/language": {
 		/*
-		"format": "{long}"
 		"on-click": "swaymsg input type:keyboard xkb_switch_layout next"
-		*/
         "format": "{variant}"
-		/*
-		NOT WORKING :
-			"actions":  {
-			"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
-			"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard 2",
-			"on-scroll-up": "hyprctl switchxkblayout at-translated-set-2-keyboard prev",
-			"on-scroll-down": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
-			}
+		"format": "{long}"
 		*/
+		"format": "{long}",
+		"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
+		"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
+		"on-scroll-up": "hyprctl switchxkblayout at-translated-set-2-keyboard prev",
+		"on-scroll-down": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+		"keyboard-name": "at-translated-set-2-keyboard"
     },
 
 	/*
