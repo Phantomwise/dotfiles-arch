@@ -296,7 +296,7 @@ fi
     max_icon_size = 128
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/home/phantomwise/.local/share/icons/svg/:/home/phantomwise/.local/share/icons/svg/notifications/
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/home/phantomwise/.local/share/icons/svg/:/home/phantomwise/.local/share/icons/svg/battery/:/home/phantomwise/.local/share/icons/svg/notifications/
 
     #░███████████████████████████████████████████████████████████████╗
     #░█╔════════════════════════════════════════════════════════════█║
