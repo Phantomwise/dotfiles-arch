@@ -24,13 +24,13 @@ fi
 # Check battery levels and send notifications
 if [ -n "$BATTERY_LEVEL" ]; then
     if [ "$BATTERY_LEVEL" -gt 99 ] && [ "$BATTERY_DISCHARGING" -eq 0 ] && [ ! -f $FULL_FILE ]; then
-        notify-send "Battery Charged" "Battery is fully charged."-u normal -i "battery-full" -r 9991
+        notify-send "Battery Charged" "Battery is fully charged." -u normal -i "battery-v-100" -r 9991
         touch $FULL_FILE
     elif [ "$BATTERY_LEVEL" -le $WARNING_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $EMPTY_FILE ]; then
-        notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i "battery-low" -r 9991
+        notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u normal -i "battery-v-alert" -r 9991
         touch $EMPTY_FILE
     elif [ "$BATTERY_LEVEL" -le $CRITICAL_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $CRITICAL_FILE ]; then
-        notify-send "Battery Critical" "The computer will shutdown soon." -u critical -i "battery-critical" -r 9991
+        notify-send "Battery Critical" "The computer will shutdown soon." -u critical -i "battery-v-alert" -r 9991
         touch $CRITICAL_FILE
     fi
 fi
