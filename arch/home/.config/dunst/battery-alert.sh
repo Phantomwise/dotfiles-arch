@@ -3,7 +3,7 @@
 export DISPLAY=:0
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
-WARNING_LEVEL=20
+WARNING_LEVEL=15
 CRITICAL_LEVEL=5
 
 # Extract battery status
@@ -24,7 +24,7 @@ fi
 # Check battery levels and send notifications
 if [ -n "$BATTERY_LEVEL" ]; then
     if [ "$BATTERY_LEVEL" -gt 99 ] && [ "$BATTERY_DISCHARGING" -eq 0 ] && [ ! -f $FULL_FILE ]; then
-        notify-send "Battery Charged" "Battery is fully charged." -i "battery-full" -r 9991
+        notify-send "Battery Charged" "Battery is fully charged."-u normal -i "battery-full" -r 9991
         touch $FULL_FILE
     elif [ "$BATTERY_LEVEL" -le $WARNING_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $EMPTY_FILE ]; then
         notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i "battery-low" -r 9991

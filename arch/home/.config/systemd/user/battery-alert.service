@@ -2,4 +2,4 @@
 Description=Battery Level Notification
 
 [Service]
-ExecStart=/home/phantomwise/.local/bin/scripts/battery-alert.sh
+ExecStart=/home/phantomwise/.config/dunst/battery-alert.sh
