@@ -55,7 +55,7 @@ echo "2. Printable (Standard) (32-126)"
 echo "3. DEL (127)"
 echo "4. Extended ASCII (128-255)"
 
-read -p "Enter your choice (1-5): " choice
+read -p "Enter your choice (0-4): " choice
 
 case $choice in
     0)
