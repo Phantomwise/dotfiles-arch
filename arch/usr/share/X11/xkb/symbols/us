@@ -870,7 +870,7 @@ xkb_symbols "colemak" {
 //   - AE, OE
 
 partial alphanumeric_keys
-xkb_symbols "colemak-mod" {
+xkb_symbols "colemak-pw" {
 
     name[Group1]= "English (Colemak)";
 
