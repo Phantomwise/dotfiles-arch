@@ -876,7 +876,7 @@ xkb_symbols "colemak" {
 //   - ø Ø to 0
 
 partial alphanumeric_keys
-xkb_symbols "colemak-pw" {
+xkb_symbols "colemak-kl" {
 
     name[Group1]= "English (Colemak)";
 
