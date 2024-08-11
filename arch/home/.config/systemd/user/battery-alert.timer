@@ -3,7 +3,7 @@ Description=Runs battery alert script periodically
 
 [Timer]
 OnBootSec=5min
-OnUnitActiveSec=10min
+OnUnitActiveSec=5min
 
 [Install]
 WantedBy=timers.target
