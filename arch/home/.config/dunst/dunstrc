@@ -496,12 +496,12 @@ fi
 [change-format-dunstify]
 
         appname = dunstify
-        format = "<b>%s</b>\n<i>%b</i>\n<i>TEST dunstify</i>"
+        format = "<b>%s</b>\n<i>%b</i>\n<i>dunstify</i>"
 
 [change-format-volume]
 
         appname = Volume
-        format = "<b>%s</b>\ntest\n<i>%b\nTEST Volume</i>"
+        format = "<b>%s</b>\n<i>%b\n</i>"
 
 [change-format-discord]
         desktop_entry = Discord
