@@ -3,7 +3,7 @@
 export DISPLAY=:0
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
-WARNING_LEVEL=20
+WARNING_LEVEL=25
 CRITICAL_LEVEL=10
 
 # Extract battery status
@@ -29,7 +29,7 @@ if [ -n "$BATTERY_LEVEL" ]; then
     elif [ "$BATTERY_LEVEL" -le $WARNING_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $EMPTY_FILE ]; then
         notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u normal -i "battery-v-alert" -r 9991
         touch $EMPTY_FILE
-    elif [ "$BATTERY_LEVEL" -le $CRITICAL_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $CRITICAL_FILE ]; then
+    elif [ "$BATTERY_LEVEL" -le $CRITICAL_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ]; then
         notify-send "Battery Critical" "The computer will shutdown soon." -u critical -i "battery-v-alert" -r 9991
         touch $CRITICAL_FILE
     fi
