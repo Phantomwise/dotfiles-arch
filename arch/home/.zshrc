@@ -32,8 +32,15 @@ compinit
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-PROMPT="%K{18}%F{black}%f%k%B%K{18}%F{white}%n%f%k%b%K{black}%F{18}%f%k%K{21}%F{black}%f%k%B%K{21}%F{white}@%m%f%k%b%K{black}%F{21}%f%k%K{26}%F{black}%f%k%B%K{26}%F{white}%d%f%k%b%K{black}%F{26}%f%k %B%#%b "
-RPROMPT="%K{black}%F{26}%f%k%B%K{26}%F{white}%*%f%k%b%K{26}%F{black}%f%k%K{black}%F{21}%f%k%B%K{21}%F{white}%y%f%k%b%K{21}%F{black}%f%k%K{black}%F{18}%f%k%B%K{18}%F{white}zsh%f%k%b%K{18}%F{black}%f%k"
+if [[ "$XDG_SESSION_TYPE" = "tty" ]]; then
+    # Set tty prompt
+    PROMPT="%B%F{magenta}%n%f%b%B%F{white}@%f%b%B%F{blue}%m%f%b %B%F{cyan}%~%f%b%  %B%#%b "
+    RPROMPT="%B%F{cyan}%*%f%b %B%F{blue}%y%f%b %B%F{magenta}zsh%f%b"
+fi
+
+if [[ "$XDG_SESSION_TYPE" != "tty" ]]; then
+    PROMPT="%K{18}%F{black}%f%k%B%K{18}%F{white}%n%f%k%b%K{black}%F{18}%f%k%K{21}%F{black}%f%k%B%K{21}%F{white}@%m%f%k%b%K{black}%F{21}%f%k%K{26}%F{black}%f%k%B%K{26}%F{white}%d%f%k%b%K{black}%F{26}%f%k %B%#%b "
+    RPROMPT="%K{black}%F{26}%f%k%B%K{26}%F{white}%*%f%k%b%K{26}%F{black}%f%k%K{black}%F{21}%f%k%B%K{21}%F{white}%y%f%k%b%K{21}%F{black}%f%k%K{black}%F{18}%f%k%B%K{18}%F{white}zsh%f%k%b%K{18}%F{black}%f%k"
 
     # Transient prompt from https://www.zsh.org/mla/users/2019/msg00633.html
     zle-line-init() {
@@ -65,6 +72,7 @@ RPROMPT="%K{black}%F{26}%f%k%B%K{26}%F{white}%*%f%k%b%K{26}%F{black}%f%k%K
     }
 
     zle -N zle-line-init
+fi
 
 # ███████████████████████████████████████████████████████████████╗
 # █╔════════════════════════════════════════════════════════════█║
