@@ -3,7 +3,5 @@
     "git.openRepositoryInParentFolders": "always",
     "editor.tabSize": 4,
     "editor.detectIndentation": true,
-    "[dockercompose]": {
-    },
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Hack Nerd Font'"
 }
