@@ -7,7 +7,7 @@ add_to_path() {
         # Check if the directory is already in PATH
         case ":$PATH:" in
             *":$dir:"*) :;;  # Already in PATH
-            *) PATH="$dir:$PATH" ;;  # Add directory to PATH
+            *) PATH="$PATH:$dir" ;;  # Add directory to PATH
         esac
     done
 }
