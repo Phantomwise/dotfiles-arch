@@ -1,0 +1,10 @@
+[Unit]
+Description=Pipes Service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c "sleep 300 && screensaver-pipes-wrapper.sh"
+Restart=always
+
+[Install]
+WantedBy=default.target
