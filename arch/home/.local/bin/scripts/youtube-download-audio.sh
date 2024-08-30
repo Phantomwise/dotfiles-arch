@@ -2,7 +2,7 @@
 
 # Author : ChatGPT (I'm very bad at coding -___-)
 # Description :
-    # Runs yt-dlp to download MP3, OPUS and WEBM
+    # Runs yt-dlp to download the best audio format
     # Can download a single video or playlist
 # Dependencies : yt-dlp
 
@@ -41,29 +41,13 @@ if is_playlist "$url"; then
     fi
 fi
 
-# Define functions for each command
-function download_mp3 {
-    echo -e "${info} Running yt-dlp to download audio (MP3):"
-    yt-dlp -x --audio-format mp3 --audio-quality 0 "$url" && \
-    echo -e "${succ} Download MP3 successful." || \
-    echo -e "${err} Error while downloading MP3."
+# Define function to download the best audio format
+function download_audio {
+    echo -e "${info} Running yt-dlp to download the best audio format:"
+    yt-dlp -x --audio-format best "$url" && \
+    echo -e "${succ} Download audio successful." || \
+    echo -e "${err} Error while downloading audio."
 }
 
-function download_opus {
-    echo -e "${info} Running yt-dlp to download audio (OPUS):"
-    yt-dlp -x --audio-format opus "$url" && \
-    echo -e "${succ} Download OPUS successful." || \
-    echo -e "${err} Error while downloading OPUS."
-}
-
-function download_video_w_sub {
-    echo -e "${info} Running yt-dlp to download video with subtitles:"
-    yt-dlp --write-subs --sub-langs "all" "$url" && \
-    echo -e "${succ} Download video with subtitles successful." || \
-    echo -e "${err} Error while downloading video with subtitles."
-}
-
-# Run each command in order, continue on failure
-download_mp3
-download_opus
-download_video_w_sub
+# Run the command to download audio
+download_audio
