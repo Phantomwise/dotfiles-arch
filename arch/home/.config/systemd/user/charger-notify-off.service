@@ -1,0 +1,9 @@
+[Unit]
+Description=Charger Notification Service
+
+[Service]
+ExecStart=/home/phantomwise/.config/dunst/scripts/charger_off.sh
+ExecStartPost=/usr/bin/logger "charger-notify-off.service triggered"
+
+[Install]
+WantedBy=default.target
