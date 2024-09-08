@@ -29,15 +29,45 @@
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
+# Environment variables
+set $XDG_CURRENT_DESKTOP Sway
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-set $term kitty
+
+# Programs
+set $terminal kitty
+set $texteditor leafpad
+set $codeeditor vscodium
+# $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
+set $filemanager nemo
+set $webbrowser1 librewolf
+set $webbrowser2 waterfox
+set $webbrowser3 firefox
+set $audioplayer vlc
+set $videoplayer vlc
+
+# Application Launcher : rofi
+set $runmenu rofi -show run
+set $drunmenu rofi -show drun
+set $sshmenu rofi -show ssh
+set $windowmenu rofi -show window
+set $filebrowsermenu rofi -show filebrowser
+set $emoji rofimoji --action type
+    # $emoji = rofi -modi "emoji:rofimoji" -show emoji
+set $calc rofi -show calc -no-show-match -no-sort
+    # ERROR: (but still working)
+    # ** (process:143427): WARNING **: 16:58:47.111: Mode 'calc' does not have a type set. Please update mode/plugin.
+set $powermenu rofi -show power-menu -modi power-menu:rofi-power-menu
+    # NB: located in /home/phantomwise/Scripts/rofi-power-menu
+    # NB: copy not in use in /home/phantomwise/Scripts/rofi-power-menu
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
