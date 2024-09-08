@@ -172,11 +172,19 @@ input "type:keyboard" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-    bindsym Ctrl+Shift+c exec vscodium
-    bindsym Ctrl+Shift+w exec firefox
-    bindsym $mod+z exec librewolf
-    bindsym $mod+x exec $term
-    bindsym Ctrl+Shift+t exec leafpad
+
+    # Applications
+    bindsym $mod+x exec $terminal
+    bindsym Ctrl+Alt+x exec $terminal
+    bindsym Ctrl+Alt+t exec $texteditor
+    bindsym Ctrl+Alt+c exec $codeeditor
+    # $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
+    bindsym Ctrl+Alt+f exec $filemanager
+    bindsym Ctrl+Alt+l exec $webbrowser1
+    # bindsym $mod+x exec $webbrowser2
+    bindsym Ctrl+Alt+w exec $webbrowser3
+    bindsym Ctrl+Alt+m exec $audioplayer
+    bindsym Ctrl+Alt+v exec $videoplayer
 
     # Kill focused window
     bindsym $mod+Shift+q kill
