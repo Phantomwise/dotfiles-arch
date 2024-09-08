@@ -32,46 +32,34 @@
 # Environment variables
 set $XDG_CURRENT_DESKTOP Sway
 
-# Logo key. Use Mod1 for Alt.
-set $mod Mod4
+# Color variables
+    # Pure colors
+        set $rgb-black #000000
+        set $rgba-black #000000FF
+        set $rgb-white #FFFFFF
+        set $rgba-white #FFFFFFFF
+        # set $rgb-yellow-p = rgb(ffff00)
+        # set $rgb-red-p = rgb(ff0000)
+        # set $rgb-purple-p = rgb(ff00ff)
+        # set $rgb-blue-p = rgb(0000ff)
+        # set $rgb-cyan-p = rgb(00ffff)
+        # set $rgb-green-p = rgb(00ff00)
+        # set $rgb-xxx = rgb(0000ff)
+    # Other colors
+        set $rgb-blue #0080FF
+        set $rgba-blue #0080FFFF
+        # set $rgb-yellow-dk1 = rgb(ffaa00)
+        # set $rgb-yellow-dk2 = rgb(ee9400)
+        set $rgb-red #A10000
+        set $rgba-red #A10000FF
+        # set $rgb-pink = rgb(a00035)
+        # set $rgb-violet = rgb(8900ff)
+    # Theme colors
+        # set $rgb-light = rgb(004baa)
+        # set $rgb-dark = rgb(004baa)
+    # Transparent colors ()
 
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
-
-# Programs
-set $terminal kitty
-set $texteditor leafpad
-set $codeeditor vscodium
-# $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
-set $filemanager nemo
-set $webbrowser1 librewolf
-set $webbrowser2 waterfox
-set $webbrowser3 firefox
-set $audioplayer vlc
-set $videoplayer vlc
-
-# Application Launcher : rofi
-set $runmenu rofi -show run
-set $drunmenu rofi -show drun
-set $sshmenu rofi -show ssh
-set $windowmenu rofi -show window
-set $filebrowsermenu rofi -show filebrowser
-set $emoji rofimoji --action type
-    # $emoji = rofi -modi "emoji:rofimoji" -show emoji
-set $calc rofi -show calc -no-show-match -no-sort
-    # ERROR: (but still working)
-    # ** (process:143427): WARNING **: 16:58:47.111: Mode 'calc' does not have a type set. Please update mode/plugin.
-set $powermenu rofi -show power-menu -modi power-menu:rofi-power-menu
-    # NB: located in /home/phantomwise/Scripts/rofi-power-menu
-    # NB: copy not in use in /home/phantomwise/Scripts/rofi-power-menu
-
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+    # Color format : #RRGGBB or #RRGGBBAA
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
@@ -96,10 +84,74 @@ shadow_color #0000007F
 # inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
 default_dim_inactive 0.0
 dim_inactive_colors.unfocused #000000FF
-dim_inactive_colors.urgent #900000FF
+dim_inactive_colors.urgent $rgba-red
 
 # Move minimized windows into Scratchpad (enable|disable)
 scratchpad_minimize disable
+
+# Colors
+# class title_border_color title_background_color title_text_color indicator_color child_border_color
+client.focused $rgba-blue $rgba-black $rgba-white $rgba-white $rgba-blue
+# client.focused_inactive
+# client.focused_tab_title
+client.unfocused $rgba-black $rgba-black $rgba-white $rgba-white $rgba-black
+client.urgent $rgba-red $rgba-black $rgba-white $rgba-red $rgba-blue
+
+    # client.<class> <border> <background> <text> [<indicator> [<child_border>]]
+        # Configures  the  color  of window borders and title bars. The first three colors are required.
+        # When omitted indicator will use a sane default and child_border will use  the  color  set  for
+        # background. Colors may be specified in hex, either as #RRGGBB or #RRGGBBAA.
+
+        # The available classes are:
+            # client.focused
+                # The window that has focus.
+            # client.focused_inactive
+                # The most recently focused view within a container which is not focused.
+            # client.focused_tab_title
+                # A  view  that  has  focused descendant container. Tab or stack container title that is the
+                # parent of the focused container but is not directly focused. Defaults to  focused_inactive
+                # if not specified and does not use the indicator and child_border colors.
+            # client.placeholder
+                # Ignored (present for i3 compatibility).
+            # client.unfocused
+                # A view that does not have focus.
+            # client.urgent
+                # A  view with an urgency hint. Note: Native Wayland windows do not support urgency. Urgency
+                # only works for Xwayland windows.
+
+        # The meaning of each color is:
+            # border
+                # The border around the title bar.
+            # background
+                # The background of the title bar.
+            # text
+                # The text color of the title bar.
+            # indicator
+                # The color used to indicate where a new view will open. In a tiled  container,  this  would
+                # paint the right border of the current view if a new view would be opened to the right.
+            # child_border
+                # The border around the view itself.
+
+        # The default colors are:
+            # ┌─────────────────┬─────────┬────────────┬─────────┬───────────┬──────────────┐
+            # │      class      │ border  │ background │ text    │ indicator │ child_border │
+            # ├─────────────────┼─────────┼────────────┼─────────┼───────────┼──────────────┤
+            # │ background      │ n/a     │ #ffffff    │ n/a     │ n/a       │ n/a          │
+            # ├─────────────────┼─────────┼────────────┼─────────┼───────────┼──────────────┤
+            # │ focused         │ #4c7899 │ #285577    │ #ffffff │ #2e9ef4   │ #285577      │
+            # ├─────────────────┼─────────┼────────────┼─────────┼───────────┼──────────────┤
+            # │ focused_inac‐   │ #333333 │ #5f676a    │ #ffffff │ #484e50   │ #5f676a      │
+            # │ tive            │         │            │         │           │              │
+            # ├─────────────────┼─────────┼────────────┼─────────┼───────────┼──────────────┤
+            # │ focused_tab_ti‐ │ #333333 │ #5f676a    │ #ffffff │ n/a       │ n/a          │
+            # │ tle             │         │            │         │           │              │
+            # ├─────────────────┼─────────┼────────────┼─────────┼───────────┼──────────────┤
+            # │ unfocused       │ #333333 │ #222222    │ #888888 │ #292d2e   │ #222222      │
+            # ├─────────────────┼─────────┼────────────┼─────────┼───────────┼──────────────┤
+            # │ urgent          │ #2f343a │ #900000    │ #ffffff │ #900000   │ #900000      │
+            # ├─────────────────┼─────────┼────────────┼─────────┼───────────┼──────────────┤
+            # │ placeholder     │ #000000 │ #0c0c0c    │ #ffffff │ #000000   │ #0c0c0c      │
+            # └─────────────────┴─────────┴────────────┴─────────┴───────────┴──────────────┘
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
@@ -164,161 +216,6 @@ input "type:keyboard" {
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
-# █║░░░░░░░░░░░░░░░░░░░░░ KEY BINDINGS ░░░░░░░░░░░░░░░░░░░░░░█║
-# ████████████████████████████████████████████████████████████║
-# ╚═══════════════════════════════════════════════════════════╝
-
-# Basics:
-#
-    # Start a terminal
-    bindsym $mod+Return exec $term
-
-    # Applications
-    bindsym $mod+x exec $terminal
-    bindsym Ctrl+Alt+x exec $terminal
-    bindsym Ctrl+Alt+t exec $texteditor
-    bindsym Ctrl+Alt+c exec $codeeditor
-    # $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
-    bindsym Ctrl+Alt+f exec $filemanager
-    bindsym Ctrl+Alt+l exec $webbrowser1
-    # bindsym $mod+x exec $webbrowser2
-    bindsym Ctrl+Alt+w exec $webbrowser3
-    bindsym Ctrl+Alt+m exec $audioplayer
-    bindsym Ctrl+Alt+v exec $videoplayer
-
-    # Kill focused window
-    bindsym $mod+Shift+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
-
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    floating_modifier $mod normal
-
-    # Reload the configuration file
-    bindsym $mod+Shift+c reload
-
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
-# Moving around:
-#
-    # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
-
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
-#
-# Workspaces:
-#
-    # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
-    # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
-#
-# Layout stuff:
-#
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
-
-    # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
-
-    # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
-
-    # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
-
-    # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
-
-    # Move focus to the parent container
-    bindsym $mod+a focus parent
-#
-# Scratchpad:
-#
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
-
-    # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
-#
-# Resizing containers:
-#
-mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-
-    # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
-# ████████████████████████████████████████████████████████████╗
-# █╔═════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░ STATUS BAR ░░░░░░░░░░░░░░░░░░░░░░░█║
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
@@ -332,13 +229,23 @@ bar {
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        statusline $rgb-white
+        background $rgb-black
+        focused_workspace $rgba-blue $rgba-black $rgba-blue
+        active_workspace $rgba-blue $rgba-black $rgba-white
+        inactive_workspace $rgba-black $rgba-black $rgba-white
+        urgent_workspace $rgba-red $rgba-black $rgba-white
     }
 }
 
+# ████████████████████████████████████████████████████████████╗
+# █╔═════════════════════════════════════════════════════════█║
+# █║░░░░░░░░░░░░░░░░░░░░░ IMPORT FILES ░░░░░░░░░░░░░░░░░░░░░░█║
+# ████████████████████████████████████████████████████████████║
+# ╚═══════════════════════════════════════════════════════════╝
+
 include /etc/sway/config.d/*
+include ~/.config/sway/keybindings
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
