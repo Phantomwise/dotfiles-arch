@@ -17,32 +17,47 @@
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
+# Mouse bindings
+    # Mouse bindings operate on the container under the cursor instead of the container that has fo‐
+    # cus. Mouse buttons can either be specified in the form button[1-9] or by using the name of the
+    # event code (ex BTN_LEFT or BTN_RIGHT). For the former option, the buttons will  be  mapped  to
+    # their  values  in  X11  (1=left, 2=middle, 3=right, 4=scroll up, 5=scroll down, 6=scroll left,
+    # 7=scroll right, 8=back, 9=forward). For the latter option, you can find the event names  using
+    # libinput debug-events.
+
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░░ VARIABLES ░░░░░░░░░░░░░░░░░░░░░░░█║
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
-# Logo key. Use Mod1 for Alt.
+# Mod key
+    # Mod1 = Alt
+    # Mod4 = Win
 set $mod Mod4
 
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
+set $left n
+set $down e
+set $up u
+set $right i
 
 # Programs
 set $terminal kitty
 set $texteditor leafpad
 set $codeeditor vscodium
-# $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
+# set $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
 set $filemanager nemo
 set $webbrowser1 librewolf
 set $webbrowser2 waterfox
 set $webbrowser3 firefox
 set $audioplayer vlc
 set $videoplayer vlc
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 # Application Launcher : rofi
 set $runmenu rofi -show run
@@ -58,11 +73,6 @@ set $calc rofi -show calc -no-show-match -no-sort
 set $powermenu rofi -show power-menu -modi power-menu:rofi-power-menu
     # NB: located in /home/phantomwise/Scripts/rofi-power-menu
     # NB: copy not in use in /home/phantomwise/Scripts/rofi-power-menu
-
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
@@ -84,7 +94,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
@@ -98,7 +108,6 @@ bindsym $mod+x exec $terminal
 bindsym Ctrl+Alt+x exec $terminal
 bindsym Ctrl+Alt+t exec $texteditor
 bindsym Ctrl+Alt+c exec $codeeditor
-# $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
 bindsym Ctrl+Alt+f exec $filemanager
 bindsym Ctrl+Alt+l exec $webbrowser1
 # bindsym $mod+x exec $webbrowser2
@@ -106,16 +115,21 @@ bindsym Ctrl+Alt+w exec $webbrowser3
 bindsym Ctrl+Alt+m exec $audioplayer
 bindsym Ctrl+Alt+v exec $videoplayer
 
-# Start your launcher
+# Start your sway-bar
 # bindsym $mod+d exec $menu
+
+# Start rofi
 bindsym $mod+r exec $runmenu
 bindsym $mod+d exec $drunmenu
 # bindsym $mod+b exec $filebrowsermenu
-# bindsym $mod+h exec $sshmenu
+bindsym $mod+h exec $sshmenu
 # bindsym $mod+e exec $emoji
-# bindsym $mod+c exec $calc
+bindsym $mod+c exec $calc
 # bindsym $mod+l exec $powermenu
-# bindsym Alt+Tab exec $windowmenu
+bindsym Alt+Tab exec $windowmenu
+
+# Start/kill waybar
+bindsym $mod+Shift+w exec 'killall waybar || waybar --config ~/.config/waybar/config-sway.jsonc'
 
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
@@ -162,6 +176,18 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
+
+# Cycle through workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Prior workspace prev
+bindsym $mod+Next workspace next
+
+# Cycle through workspaces with the mouse
+bindsym --whole-window {
+    $mod+button4 workspace prev
+    $mod+button5 workspace next
+}
+
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
@@ -188,10 +214,22 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+b splith
 bindsym $mod+v splitv
 
-# Switch the current container between different layout styles
+# layout default|splith|splitv|stacking|tabbed
+    # Sets the layout mode of the focused container.
+# bindsym $mod+d layout default
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+t layout tabbed
+
+# layout toggle [split|all]
+    # Cycles  the  layout mode of the focused container though a preset list of layouts. If no argu‐
+    # ment is given, then it cycles through stacking, tabbed and the last split layout. If split  is
+    # given, then it cycles through splith and splitv. If all is given, then it cycles through every
+    # layout.
+bindsym $mod+p layout toggle split
+bindsym $mod+l layout toggle all
+
+# layout toggle [split|tabbed|stacking|splitv|splith] [split|tabbed|stacking|splitv|splith]...
+    # Cycles the layout mode of the focused container through a list of layouts.
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -223,9 +261,11 @@ bindsym $mod+minus scratchpad show
 
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
-    # █║░░░░░░░░░░░░░░░░░░ RESIZING CONTAINERS ░░░░░░░░░░░░░░░░░░█║
+    # █║░░░░░░░░░░░░░░░░░░░░░░░░ RESIZE ░░░░░░░░░░░░░░░░░░░░░░░░░█║
     # ████████████████████████████████████████████████████████████║
     # ╚═══════════════════════════════════════════════════════════╝
+
+bindsym $mod+Shift+r mode "resize"
 
 mode "resize" {
     # left will shrink the containers width
@@ -247,7 +287,6 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+r mode "resize"
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
