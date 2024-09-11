@@ -30,7 +30,7 @@
 # ╚═══════════════════════════════════════════════════════════╝
 
 # Environment variables
-set $XDG_CURRENT_DESKTOP Sway
+# set $XDG_CURRENT_DESKTOP sway
 
 # Color variables
     # Pure colors
@@ -68,7 +68,14 @@ set $XDG_CURRENT_DESKTOP Sway
 # ╚═══════════════════════════════════════════════════════════╝
 
 # window corner radius in px
-corner_radius 10
+corner_radius 0
+
+gaps inner 10
+# gaps inner|outer|horizontal|vertical|top|right|bottom|left <amount>
+           # Sets  default  amount pixels of inner or outer gap, where the inner affects spacing around each view and outer affects the spacing around each
+           # workspace. Outer gaps are in addition to inner gaps. To reduce or remove outer gaps, outer gaps can be set to a negative value. outer gaps can
+           # also be specified per side with top, right, bottom, and left or per direction with horizontal and vertical.
+           # This affects new workspaces only, and is used when the workspace doesn't have its own gaps settings (see: workspace <ws> gaps ...).
 
 # Window background blur
 blur off
@@ -95,7 +102,7 @@ client.focused $rgba-blue $rgba-black $rgba-white $rgba-white $rgba-blue
 # client.focused_inactive
 # client.focused_tab_title
 client.unfocused $rgba-black $rgba-black $rgba-white $rgba-white $rgba-black
-client.urgent $rgba-red $rgba-black $rgba-white $rgba-red $rgba-blue
+client.urgent $rgba-red $rgba-red $rgba-white $rgba-red $rgba-blue
 
     # client.<class> <border> <background> <text> [<indicator> [<child_border>]]
         # Configures  the  color  of window borders and title bars. The first three colors are required.
@@ -213,6 +220,15 @@ input "type:keyboard" {
     # xkb_variant colemak-kl,,
     xkb_options grp:alt_shift_toggle
 }
+
+# ████████████████████████████████████████████████████████████╗
+# █╔═════════════════════════════════════════════════════════█║
+# █║░░░░░░░░░░░░░░░░░░░░░░ STATUS BAR ░░░░░░░░░░░░░░░░░░░░░░░█║
+# ████████████████████████████████████████████████████████████║
+# ╚═══════════════════════════════════════════════════════════╝
+
+# exec 'waybar --config ~/.config/waybar/config-sway.jsonc'
+exec 'killall waybar || waybar --config ~/.config/waybar/config-sway.jsonc'
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
