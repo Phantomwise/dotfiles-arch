@@ -54,7 +54,7 @@ Icon fonts :
 	"layer": "top",
 	"position": "bottom",
 	"margin": 0,
-	"height": 24,
+	"height": 25,
 
 /*
 ███████████████████████████████████████████████████████████████╗
@@ -73,7 +73,6 @@ Icon fonts :
 		"custom/right-arrow-light-dark",
 		"sway/mode",
 		"sway/window#title",
-		"sway/window#class",
 		"custom/right-arrow-dark-transparent"
 	],
 	"modules-center": [
@@ -86,9 +85,15 @@ Icon fonts :
 		"custom/right-arrow-dark-transparent"
 	],
 	"modules-right": [
+		/*
+		"custom/right-arrow-battery",
+		*/
 		"custom/left-arrow-transparent-dark",
 		"battery",
 		"custom/left-arrow-dark-light",
+		/*
+		"custom/left-arrow-battery",
+		*/
 		"temperature",
 		"custom/left-arrow-light-dark",
 		"cpu",
@@ -101,7 +106,7 @@ Icon fonts :
 		"custom/left-arrow-light-dark",
 		"pulseaudio",
 		"custom/left-arrow-dark-light",
-		"hyprland/language",
+		"sway/language",
 		"custom/left-arrow-light-dark",
 		"tray"
 	],
@@ -131,17 +136,18 @@ Icon fonts :
 
 	"clock#day": {
 		"format": "{:%a}",
+		"format-alt": "{:%A}",
 		"tooltip": true,
-		"tooltip-format": "{:%Hh%Mm%Ss %Z\n%A the %d of %B %Y}"
+		"tooltip-format": "{:%Hh%M %Z\n%A the %d of %B %Y}"
 	},
 
 	"clock#hour": {
+		/*
+		"format": "{:%Hh%M}",
+		*/
 		"format": "{:%Hh%M}",
 		"format-alt": "{:%Hh%M %Z}",
-	/*
-		"format-alt": "{:%A, %B %d, %Y (%R)}  ",
-		"tooltip-format": "{:%H:%M:%S %Z\n%A the %d of %B %Y}"
-	*/
+		"timezone": "Europe/Paris",
 		"tooltip": true,
 		"tooltip-format": "{tz_list}",
 		"timezones": [
@@ -150,16 +156,19 @@ Icon fonts :
 			"America/New_York",
 			"America/Los_Angeles",
 			"Asia/Tokyo"
-		],
+		]
+		/*
 		"actions":  {
 			"on-click-right": "mode",
 			"on-scroll-up": "tz_up",
 			"on-scroll-down": "tz_down"
 			}
-	},
+		*/
+		},
 
 	"clock#date": {
 		"format": "{:%d/%m}",
+		"format-alt": "{:%d/%m/%Y}",
 		"tooltip": true,
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
@@ -241,26 +250,38 @@ Icon fonts :
 		"max-length": 50,
 		"rewrite": {
 			"xdg_shell": "Wayland"
-			}
+			},
+		"on-scroll-up": "swaymsg workspace prev",
+		"on-scroll-down": "swaymsg workspace next"
 	
 
 	},
 
+	/*
 	"sway/window#class": {
 		"format": "{class}",
-		"max-length": 50
+		"max-length": 50,
+		"on-scroll-up": "swaymsg workspace prev",
+		"on-scroll-down": "swaymsg workspace next"
 	},
+	*/
+	/* Not available */
 
 	"sway/window#title": {
 		"format": "{title}",
-		"max-length": 50
-		/*
+		"max-length": 50,
+		"on-click-middle": "swaymsg kill",
+		"on-scroll-up": "swaymsg workspace prev",
+		"on-scroll-down": "swaymsg workspace next",
 		"rewrite": {
-		"(.*) - Mozilla Firefox": "🌎 $1",
-		"(.*) - vim": " $1",
-		"(.*) - zsh": " [$1]"
+			/*
+			"(.*) - VSCodium": "  $1",
+			"(.*) - Mozilla Firefox": "󰈹  $1"
+			"(.*) - Mozilla Firefox": "🌎 $1",
+			"(.*) - vim": " $1",
+			"(.*) - zsh": " [$1]"
+			*/
 		}
-		*/
 	},
 
 	/*
@@ -273,59 +294,33 @@ Icon fonts :
 	*/
 
 	/*
-	"hyprland/window": {
-		"format": "{class}"
-	},
-	*/
-
-	"hyprland/window#class": {
-		"format": "{class}",
-		"on-click-middle": "hyprctl dispatch killactive",
-		"on-scroll-up": "hyprctl dispatch workspace e-1",
-		"on-scroll-down": "hyprctl dispatch workspace e+1"
-		/*
-		Focus to the next window in the workspace
-		NB: Not usable because the mouse is moved when changing focus.
-		"on-scroll-up": "hyprctl dispatch cyclenext prev",
-		"on-scroll-down": "hyprctl dispatch cyclenext"
-		*/
-	},
-
 	"hyprland/window#title": {
 		"format": "{title}",
 		"max-length" : 30,
 		"on-click-middle": "hyprctl dispatch killactive",
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
 		"on-scroll-down": "hyprctl dispatch workspace e+1"
-		/*
-		Focus to the next window in the workspace
-		NB: Not usable because the mouse is moved when changing focus.
-		"on-scroll-up": "hyprctl dispatch cyclenext prev",
-		"on-scroll-down": "hyprctl dispatch cyclenext"
-		*/
 	},
+	*/
 
 	/*
 	███████████████████████████████████████████████████████████████╗
 	█╔════════════════════════════════════════════════════════════█║
-	█║░░░░░░░░░░░░░░░░░░░░░░░░░ HYPRLAND ░░░░░░░░░░░░░░░░░░░░░░░░░█║
+	█║░░░░░░░░░░░░░░░░░░░░░░░░░░░ SWAY ░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
 	█║░░░░░░░░░░░░░░░░░░░░░░░░░ LANGAGUE ░░░░░░░░░░░░░░░░░░░░░░░░░█║
 	███████████████████████████████████████████████████████████████║
 	╚══════════════════════════════════════════════════════════════╝
 	*/
 
-	"hyprland/language": {
+	"sway/language": {
+		"format": "{short} {variant}"
 		/*
-		"on-click": "swaymsg input type:keyboard xkb_switch_layout next"
-        "format": "{variant}"
-		"format": "{long}"
-		*/
-		"format": "{long}",
 		"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
 		"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
 		"on-scroll-up": "hyprctl switchxkblayout at-translated-set-2-keyboard prev",
 		"on-scroll-down": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
 		"keyboard-name": "at-translated-set-2-keyboard"
+		*/
     },
 
 	/*
@@ -639,6 +634,17 @@ Icon fonts :
 		"format": "",
 		"tooltip": false
 	}
+
+	/*
+	"custom/right-arrow-battery": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-battery": {
+		"format": "",
+		"tooltip": false
+	}
+	*/
 
 }
 

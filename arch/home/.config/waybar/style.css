@@ -128,9 +128,9 @@ window#waybar {
 #workspaces,
 #window.title,
 #mode
+/*
 #battery,
-#cpu,
-#disk,
+*/
 #pulseaudio,
 #tray {
 	color: @color-white;
@@ -141,11 +141,124 @@ window#waybar {
 #window.shell,
 #window.class,
 #temperature,
-#memory,
 #network,
 #language {
 	color: @color-white;
 	background-color: @color-main;
+}
+
+#battery {
+    color: @color-white;
+    background-color: @color-black;
+}
+#battery.charging {
+    color: @color-white;
+    background-color: @color-black;
+}
+#battery.discharging {
+    color: @color-white;
+    background-color: @color-black;
+}
+#battery.full {
+    color: @color-white;
+    background-color: @color-black;
+}
+#battery.low {
+    color: #ffbb00;
+    background-color: @color-black;
+}
+#battery.critical {
+    color: #FF0000;
+    background-color: @color-black;
+}
+#battery.urgent {
+    color: #FF0000;
+    background-color: @color-black;
+}
+
+#cpu {
+	color: @color-white;
+	background-color: @color-black;
+}
+#cpu.low {
+	color: @color-white;
+	background-color: @color-black;
+}
+#cpu.medium {
+    color: @color-yellow;
+    background-color: @color-black;
+}
+#cpu.high {
+    color: #FF0000;
+    background-color: @color-black;
+}
+#cpu.critical {
+    color: #FF0000;
+    background-color: @color-black;
+}
+
+#memory {
+	color: @color-white;
+	background-color: @color-main;
+}
+#memory.low {
+	color: @color-white;
+	background-color: @color-main;
+}
+#memory.medium {
+    color: @color-yellow;
+	background-color: @color-main;
+}
+#memory.high {
+    color: #FF0000;
+	background-color: @color-main;
+}
+#memory.critical {
+    color: #FF0000;
+	background-color: @color-main;
+}
+
+#disk {
+	color: @color-white;
+	background-color: @color-black;
+}
+#disk.low {
+	color: @color-white;
+	background-color: @color-black;
+}
+#disk.medium {
+    color: @color-yellow;
+    background-color: @color-black;
+}
+#disk.high {
+    color: #FF0000;
+    background-color: @color-black;
+}
+#disk.critical {
+    color: #FF0000;
+    background-color: @color-black;
+}
+
+
+#pulseaudio {
+	color: @color-white;
+    background-color: @color-black;
+}
+#pulseaudio.muted {
+    color: #FF0000;
+    background-color: @color-black;
+}
+#pulseaudio.low {
+	color: @color-white;
+    background-color: @color-black;
+}
+#pulseaudio.medium {
+	color: @color-white;
+    background-color: @color-black;
+}
+#pulseaudio.high {
+	color: @color-white;
+    background-color: @color-black;
 }
 
 /*
@@ -207,5 +320,66 @@ window#waybar {
 #custom-left-arrow-light {
 	color: #292b2e;
 	background: #1a1a1a;
+}
+*/
+
+
+/* TESTING : Arrow modules with changing color depending on the battery state */
+
+/*
+:root {
+    --color-default: #000000;
+    --color-charging: #FFFF00;
+    --text-color-default: #FFFFFF;
+    --text-color-charging: #000000;
+}
+*/
+
+/* New arrow modules specifically for the battery */
+/*
+#custom-left-arrow-battery,
+#custom-right-arrow-battery {
+    font-size: 18px;
+    color: @color-main;
+    background-color: @color-black;
+}
+*/
+
+/* Change the color of the new arrow modules based on the battery state */
+/*
+#custom-left-arrow-battery + #battery.charging + #custom-right-arrow-battery,
+#custom-left-arrow-battery.battery-charging,
+#battery.charging + #custom-right-arrow-battery.battery-charging {
+    color: #FF0000;
+    background-color: #FFFF00;
+}
+*/
+
+/* Change the color of the new arrow modules based on the battery state */
+/*
+#battery.charging ~ #custom-left-arrow-battery,
+#battery.charging ~ #custom-right-arrow-battery {
+    color: #FF0000;
+    background-color: #FFFF00;
+}
+*/
+
+
+/* Change the color of the custom arrow modules depending on the battery state */
+/*
+#battery.charging ~ #custom-left-arrow-light-dark,
+#battery.charging ~ #custom-right-arrow-dark-light,
+#battery.charging ~ #custom-left-arrow-dark-light,
+#battery.charging ~ #custom-right-arrow-light-dark,
+#battery.charging ~ #custom-left-arrow-transparent-dark,
+#battery.charging ~ #custom-right-arrow-dark-transparent,
+#battery.charging ~ #custom-left-arrow-transparent-light,
+#battery.charging ~ #custom-right-arrow-light-transparent,
+#battery.charging ~ #custom-left-arrow-dark-transparent,
+#battery.charging ~ #custom-right-arrow-transparent-dark,
+#battery.charging ~ #custom-left-arrow-light-transparent,
+#battery.charging ~ #custom-right-arrow-transparent-light {
+	color: #FF0000;
+    background-color: #ffbb00;
 }
 */
