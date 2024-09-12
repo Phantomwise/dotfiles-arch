@@ -127,6 +127,7 @@ window#waybar {
 #clock.date,
 #workspaces,
 #window.title,
+#mode
 #battery,
 #cpu,
 #disk,
@@ -137,6 +138,7 @@ window#waybar {
 }
 #custom-arch,
 #clock.hour,
+#window.shell,
 #window.class,
 #temperature,
 #memory,
