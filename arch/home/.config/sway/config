@@ -77,6 +77,8 @@ gaps inner 10
            # also be specified per side with top, right, bottom, and left or per direction with horizontal and vertical.
            # This affects new workspaces only, and is used when the workspace doesn't have its own gaps settings (see: workspace <ws> gaps ...).
 
+# exec /usr/share/sway-contrib/inactive-windows-transparency.py --opacity 0.50
+
 # Window background blur
 blur off
 blur_xray off
@@ -99,8 +101,8 @@ scratchpad_minimize disable
 # Colors
 # class title_border_color title_background_color title_text_color indicator_color child_border_color
 client.focused $rgba-blue $rgba-black $rgba-white $rgba-white $rgba-blue
-# client.focused_inactive
-# client.focused_tab_title
+client.focused_inactive $rgba-black $rgba-black $rgba-white $rgba-white $rgba-black
+client.focused_tab_title $rgba-black $rgba-black $rgba-white $rgba-white $rgba-black
 client.unfocused $rgba-black $rgba-black $rgba-white $rgba-white $rgba-black
 client.urgent $rgba-red $rgba-red $rgba-white $rgba-red $rgba-blue
 
