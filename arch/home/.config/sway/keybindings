@@ -65,7 +65,7 @@ set $drunmenu rofi -show drun
 set $sshmenu rofi -show ssh
 set $windowmenu rofi -show window
 set $filebrowsermenu rofi -show filebrowser
-set $emoji rofimoji --action type
+set $emoji rofimoji --action copy
     # $emoji = rofi -modi "emoji:rofimoji" -show emoji
 set $calc rofi -show calc -no-show-match -no-sort
     # ERROR: (but still working)
@@ -123,7 +123,7 @@ bindsym $mod+r exec $runmenu
 bindsym $mod+d exec $drunmenu
 # bindsym $mod+b exec $filebrowsermenu
 bindsym $mod+h exec $sshmenu
-# bindsym $mod+e exec $emoji
+bindsym $mod+m exec $emoji
 bindsym $mod+c exec $calc
 # bindsym $mod+l exec $powermenu
 bindsym Alt+Tab exec $windowmenu

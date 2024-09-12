@@ -63,6 +63,49 @@
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
+# █║░░░░░░░░░░░░░░░░░░░░░░░░░ INPUT ░░░░░░░░░░░░░░░░░░░░░░░░░█║
+# ████████████████████████████████████████████████████████████║
+# ╚═══════════════════════════════════════════════════════════╝
+
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+# or input <identifier>
+
+input "type:keyboard" {
+    xkb_layout us,us
+    xkb_variant colemak-kl,
+    # xkb_layout us,us,fr
+    # xkb_variant colemak-kl,,
+    xkb_options grp:alt_space_toggle
+}
+
+# ████████████████████████████████████████████████████████████╗
+# █╔═════════════════════════════════════════════════════════█║
+# █║░░░░░░░░░░░░░░░░░░░░░░░░ OUTPUT ░░░░░░░░░░░░░░░░░░░░░░░░░█║
+# ████████████████████████████████████████████████████████████║
+# ╚═══════════════════════════════════════════════════════════╝
+
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# ████████████████████████████████████████████████████████████╗
+# █╔═════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░ APPEARANCE ░░░░░░░░░░░░░░░░░░░░░░░█║
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
@@ -80,15 +123,15 @@ gaps inner 10
 # exec /usr/share/sway-contrib/inactive-windows-transparency.py --opacity 0.50
 
 # Window background blur
-blur off
-blur_xray off
-blur_passes 2
-blur_radius 5
+# blur off
+# blur_xray off
+# blur_passes 2
+# blur_radius 5
 
-shadows off
-shadows_on_csd off
-shadow_blur_radius 20
-shadow_color #0000007F
+# shadows off
+# shadows_on_csd off
+# shadow_blur_radius 20
+# shadow_color #0000007F
 
 # inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
 default_dim_inactive 0.0
@@ -164,22 +207,6 @@ client.urgent $rgba-red $rgba-red $rgba-white $rgba-red $rgba-blue
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
-# █║░░░░░░░░░░░░░░░░░░░░░░░░ OUTPUT ░░░░░░░░░░░░░░░░░░░░░░░░░█║
-# ████████████████████████████████████████████████████████████║
-# ╚═══════════════════════════════════════════════════════════╝
-
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-
-# ████████████████████████████████████████████████████████████╗
-# █╔═════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░░░░ IDLE ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
@@ -198,34 +225,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
-# █║░░░░░░░░░░░░░░░░░░░░░░░░░ INPUT ░░░░░░░░░░░░░░░░░░░░░░░░░█║
-# ████████████████████████████████████████████████████████████║
-# ╚═══════════════════════════════════════════════════════════╝
-
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-# or input <identifier>
-
-input "type:keyboard" {
-    xkb_layout us,us
-    xkb_variant colemak-kl,
-    # xkb_layout us,us,fr
-    # xkb_variant colemak-kl,,
-    xkb_options grp:alt_shift_toggle
-}
-
-# ████████████████████████████████████████████████████████████╗
-# █╔═════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░ STATUS BAR ░░░░░░░░░░░░░░░░░░░░░░░█║
+# █║░░░░░░░░░░░░░░░░░░░░░░░░ WAYBAR ░░░░░░░░░░░░░░░░░░░░░░░░░█║
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
@@ -235,26 +236,27 @@ exec 'killall waybar || waybar --config ~/.config/waybar/config-sway.jsonc'
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░ STATUS BAR ░░░░░░░░░░░░░░░░░░░░░░░█║
+# █║░░░░░░░░░░░░░░░░░░░░░░░ SWAY-BAR ░░░░░░░░░░░░░░░░░░░░░░░░█║
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+# bar {
+    # position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
-    colors {
-        statusline $rgb-white
-        background $rgb-black
-        focused_workspace $rgba-blue $rgba-black $rgba-blue
-        active_workspace $rgba-blue $rgba-black $rgba-white
-        inactive_workspace $rgba-black $rgba-black $rgba-white
-        urgent_workspace $rgba-red $rgba-black $rgba-white
-    }
-}
+    # colors {
+        # statusline $rgb-white
+        # background $rgb-black
+        # focused_workspace $rgba-blue $rgba-black $rgba-blue
+        # active_workspace $rgba-blue $rgba-black $rgba-white
+        # inactive_workspace $rgba-black $rgba-black $rgba-white
+        # urgent_workspace $rgba-red $rgba-black $rgba-white
+    # }
+# }
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
