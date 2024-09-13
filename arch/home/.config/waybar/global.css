@@ -67,7 +67,10 @@
 @define-color color-highlight #ffbb00;
 
 /* Urgent color */
+@define-color color-urgent #FF0000;
+/*
 @define-color color-urgent #a10000;
+*/
 
 /*
 ███████████████████████████████████████████████████████████████╗
