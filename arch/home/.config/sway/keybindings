@@ -290,6 +290,17 @@ mode "resize" {
 
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
+    # █║░░░░░░░░░░░░░░░░░░░░░░░░ VOLUME ░░░░░░░░░░░░░░░░░░░░░░░░░█║
+    # ████████████████████████████████████████████████████████████║
+    # ╚═══════════════════════════════════════════════════════════╝
+
+bindsym XF86AudioRaiseVolume exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%+; bash ~/.config/dunst/scripts/dunst-volume.sh'
+bindsym XF86AudioLowerVolume exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%-; bash ~/.config/dunst/scripts/dunst-volume.sh'
+bindsym XF86AudioMute exec bash -c 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; bash ~/.config/dunst/scripts/dunst-volume-mute.sh'
+# Add mute/unmute script
+
+    # ████████████████████████████████████████████████████████████╗
+    # █╔═════════════════════════════════════════════════════════█║
     # █║░░░░░░░░░░░░░░░░░░░ SCREEN BRIGHTNESS ░░░░░░░░░░░░░░░░░░░█║
     # ████████████████████████████████████████████████████████████║
     # ╚═══════════════════════════════════════════════════════════╝
