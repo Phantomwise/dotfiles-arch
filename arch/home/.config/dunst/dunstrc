@@ -493,22 +493,24 @@ fi
 #░███████████████████████████████████████████████████████████████║
 #░╚══════════════════════════════════════════════════════════════╝
 
+[override-volume]
+        body = Volume*
+        # id = 118111108
+        default_icon = volume-medium
+        # default_icon = ~/.local/share/icons/svg/volume-medium.svg
+        word_wrap = false
+
+[override-brightness]
+        body = Brightness*
+        # id = 98114105
+        default_icon = brightness
+        # default_icon = ~/.local/share/icons/svg/brightness.svg
+        word_wrap = false
+
 [change-format-dunstify]
 
         appname = dunstify
         format = "<b>%s</b>\n<i>%b</i>\n<i>dunstify</i>"
-
-[change-format-volume]
-
-        appname = Volume
-        format = "<b>%s</b>\n<i>%b\n</i>"
-
-[override-brightness]
-
-        id = 98114105
-        default_icon = brightness
-        # default_icon = ~/.local/share/icons/svg/brightness.svg
-        word_wrap = false
 
 [change-format-discord]
         desktop_entry = Discord

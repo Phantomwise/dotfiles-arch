@@ -7,4 +7,4 @@ BRIGHTNESS_PERCENTAGE=$(brightnessctl | grep -oP '\(\K[0-9]+(?=%)')
 echo "Brightness Percentage: $BRIGHTNESS_PERCENTAGE"
 
 # Send the notification with a progress bar and custom highlight color
-dunstify "Brightness Level" -u normal -r 98114105 -h "int:value:$BRIGHTNESS_PERCENTAGE" -h "string:hlcolor:#FFFFFF"
+dunstify "Brightness" "Brightness Level: $BRIGHTNESS_PERCENTAGE%" -u normal -r 98114105 -i brightness -h "int:value:$BRIGHTNESS_PERCENTAGE" -h "string:hlcolor:#FFFFFF"
