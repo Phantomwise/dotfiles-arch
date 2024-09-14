@@ -290,6 +290,20 @@ mode "resize" {
 
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
+    # █║░░░░░░░░░░░░░░░░░░░░░░ SCREENSHOTS ░░░░░░░░░░░░░░░░░░░░░░█║
+    # ████████████████████████████████████████████████████████████║
+    # ╚═══════════════════════════════════════════════════════════╝
+
+# Screenshot all screen to file named 'screenshot_date&hour.png'
+bindsym Print exec 'grim -t png $(xdg-user-dir PICTURES)/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png'
+bindsym $mod+p exec 'grim -t png $(xdg-user-dir PICTURES)/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png'
+bindsym $mod+F12 exec 'grim -t png $(xdg-user-dir PICTURES)/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png'
+
+# Screenshot area to file 'screenshot_date&hour.png'
+bindsym $mod+Alt+Print exec grim -t png -g "$(slurp)" "$(xdg-user-dir PICTURES)/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"
+
+    # ████████████████████████████████████████████████████████████╗
+    # █╔═════════════════════════════════════════════════════════█║
     # █║░░░░░░░░░░░░░░░░░░░░░░░ WALLPAPER ░░░░░░░░░░░░░░░░░░░░░░░█║
     # █║░░░░░░░░░░░░░░░░░░░░░░░ HYPRPAPER ░░░░░░░░░░░░░░░░░░░░░░░█║
     # ████████████████████████████████████████████████████████████║
