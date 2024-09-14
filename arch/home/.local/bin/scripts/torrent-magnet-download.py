@@ -25,7 +25,7 @@ def download_torrent_from_magnet(magnet_link, save_path):
     with open(torrent_path, "wb") as f:
         f.write(lt.bencode(torrent_file.generate()))
     
-    print(f'Torrent file saved at: {torrent_path}')
+    print(f'\033[92m[SUCCESS] Torrent file saved at: {torrent_path}\033[0m')
 
 def download_torrents_from_file(file_path, save_path):
     with open(file_path, 'r') as file:
