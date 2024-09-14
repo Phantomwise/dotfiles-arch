@@ -290,6 +290,21 @@ mode "resize" {
 
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
+    # █║░░░░░░░░░░░░░░░░░░░ SCREEN BRIGHTNESS ░░░░░░░░░░░░░░░░░░░█║
+    # ████████████████████████████████████████████████████████████║
+    # ╚═══════════════════════════════════════════════════════════╝
+
+# Change brightness with brightness keys
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ && exec ~/.config/dunst/scripts/dunst-brightness.sh
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && exec ~/.config/dunst/scripts/dunst-brightness.sh
+
+# Change brightness with ctrl + volume keys
+bindsym Ctrl+XF86AudioRaiseVolume exec brightnessctl set 5%+ && exec ~/.config/dunst/scripts/dunst-brightness.sh
+bindsym Ctrl+XF86AudioLowerVolume exec brightnessctl set 5%- && exec ~/.config/dunst/scripts/dunst-brightness.sh
+bindsym Ctrl+XF86AudioMute exec brightnessctl set 50% && exec ~/.config/dunst/scripts/dunst-brightness.sh
+
+    # ████████████████████████████████████████████████████████████╗
+    # █╔═════════════════════════════════════════════════════════█║
     # █║░░░░░░░░░░░░░░░░░░░░░░ SCREENSHOTS ░░░░░░░░░░░░░░░░░░░░░░█║
     # ████████████████████████████████████████████████████████████║
     # ╚═══════════════════════════════════════════════════════════╝

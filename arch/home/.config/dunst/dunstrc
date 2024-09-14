@@ -503,6 +503,13 @@ fi
         appname = Volume
         format = "<b>%s</b>\n<i>%b\n</i>"
 
+[override-brightness]
+
+        id = 98114105
+        default_icon = brightness
+        # default_icon = ~/.local/share/icons/svg/brightness.svg
+        word_wrap = false
+
 [change-format-discord]
         desktop_entry = Discord
         default_icon = ~/.local/share/icons/svg/apps/discord-white.svg
