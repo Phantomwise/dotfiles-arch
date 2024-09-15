@@ -53,17 +53,7 @@ window#waybar {
 	border-radius: 0px
 }
 
-#workspaces button:hover {
-	box-shadow: none; /* Remove predefined box-shadow */
-	text-shadow: none; /* Remove predefined text-shadow */
-	background: none; /* Remove predefined background color (white) */
-	transition: none; /* Disable predefined animations */
-	padding: 0 2px;
-	color: @color-white;
-	background-color: @color-black;
-}
-
-#workspaces button.active {
+#workspaces button.focused {
 	/*
 	border-top: 2px solid @color-text-on-light;
 	*/
@@ -140,7 +130,6 @@ window#waybar {
 #clock.hour,
 #window.shell,
 #window.class,
-#temperature,
 #network,
 #language {
 	color: @color-white;
@@ -168,12 +157,21 @@ window#waybar {
     background-color: @color-black;
 }
 #battery.critical {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: @color-black;
 }
 #battery.urgent {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: @color-black;
+}
+
+#temperature {
+	color: @color-white;
+	background-color: @color-main;
+}
+#temperature.critical {
+    color: @color-urgent;
+	background-color: @color-main;
 }
 
 #cpu {
@@ -189,11 +187,11 @@ window#waybar {
     background-color: @color-black;
 }
 #cpu.high {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: @color-black;
 }
 #cpu.critical {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: @color-black;
 }
 
@@ -210,11 +208,11 @@ window#waybar {
 	background-color: @color-main;
 }
 #memory.high {
-    color: #FF0000;
+    color: @color-urgent;
 	background-color: @color-main;
 }
 #memory.critical {
-    color: #FF0000;
+    color: @color-urgent;
 	background-color: @color-main;
 }
 
@@ -231,11 +229,11 @@ window#waybar {
     background-color: @color-black;
 }
 #disk.high {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: @color-black;
 }
 #disk.critical {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: @color-black;
 }
 
@@ -245,7 +243,7 @@ window#waybar {
     background-color: @color-black;
 }
 #pulseaudio.muted {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: @color-black;
 }
 #pulseaudio.low {
@@ -350,7 +348,7 @@ window#waybar {
 #custom-left-arrow-battery + #battery.charging + #custom-right-arrow-battery,
 #custom-left-arrow-battery.battery-charging,
 #battery.charging + #custom-right-arrow-battery.battery-charging {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: #FFFF00;
 }
 */
@@ -359,7 +357,7 @@ window#waybar {
 /*
 #battery.charging ~ #custom-left-arrow-battery,
 #battery.charging ~ #custom-right-arrow-battery {
-    color: #FF0000;
+    color: @color-urgent;
     background-color: #FFFF00;
 }
 */
@@ -379,7 +377,7 @@ window#waybar {
 #battery.charging ~ #custom-right-arrow-transparent-dark,
 #battery.charging ~ #custom-left-arrow-light-transparent,
 #battery.charging ~ #custom-right-arrow-transparent-light {
-	color: #FF0000;
+	color: @color-urgent;
     background-color: #ffbb00;
 }
 */
