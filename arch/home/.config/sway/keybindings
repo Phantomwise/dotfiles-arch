@@ -334,16 +334,35 @@ bindsym $mod+Alt+Print exec grim -t png -g "$(slurp)" "$(xdg-user-dir PICTURES)/
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
     # █║░░░░░░░░░░░░░░░░░░░░░░░ WALLPAPER ░░░░░░░░░░░░░░░░░░░░░░░█║
+    # █║░░░░░░░░░░░░░░░░░░░░░░░░ SWAYBG ░░░░░░░░░░░░░░░░░░░░░░░░░█║
+    # ████████████████████████████████████████████████████████████║
+    # ╚═══════════════════════════════════════════════════════════╝
+
+### NB
+    ### Output
+        # output \*
+        # output eDP-1
+
+### Toogle swaybg
+bindsym $mod+Shift+p exec killall swaybg || swaybg
+
+### Set random wallpaper
+set $wallpapers_best $HOME/.local/share/wallpapers/best
+bindsym $mod+Shift+p exec swaymsg output \* bg "$(find $wallpapers_best -type f | shuf -n 1)" fill
+
+    # ████████████████████████████████████████████████████████████╗
+    # █╔═════════════════════════════════════════════════════════█║
+    # █║░░░░░░░░░░░░░░░░░░░░░░░ WALLPAPER ░░░░░░░░░░░░░░░░░░░░░░░█║
     # █║░░░░░░░░░░░░░░░░░░░░░░░ HYPRPAPER ░░░░░░░░░░░░░░░░░░░░░░░█║
     # ████████████████████████████████████████████████████████████║
     # ╚═══════════════════════════════════════════════════════════╝
 
-# NB: Doesn't work at startup before a manual config reload. Hyprpaper is launched but wallpaper not applied.
+### NB: Doesn't work at startup before a manual config reload. Hyprpaper is launched but wallpaper not applied.
 
-# Toogle hyprpaper
-bindsym $mod+Shift+p exec killall hyprpaper || hyprpaper
+### Toogle hyprpaper
+# bindsym $mod+Shift+p exec killall hyprpaper || hyprpaper
 
-bindsym $mod+Shift+z exec /home/phantomwise/git/dotfiles/arch/home/.config/sway/scripts/hyprpaper-sway-set-random-best.sh
+# bindsym $mod+Shift+z exec /home/phantomwise/git/dotfiles/arch/home/.config/sway/scripts/hyprpaper-sway-set-random-best.sh
 
 # bind = $mainMod SHIFT, R, exec, leafpad
 # bind = $mainMod SHIFT, R, exec, bash /home/phantomwise/.config/hypr/scripts/hyprpaper-set-random-best.sh
@@ -360,7 +379,7 @@ set $w2 = /home/phantomwise/Pictures/wallpapers/best/wp7533094-4k-retro-night-wa
 set $w3 = /home/phantomwise/Pictures/wallpapers/best/Final-1920x1080.png
 set $ws = /home/phantomwise/Pictures/wallpapers/The-addictive-game-of-pacman-goes-retro-by-ishan730-1147475-3840x2160.jpg
 
-bindsym $mod+z exec hyprpaper wallpaper "eDP-1, $ws" || hyprpaper wallpaper "eDP-1, $w1"
+# bindsym $mod+z exec hyprpaper wallpaper "eDP-1, $ws" || hyprpaper wallpaper "eDP-1, $w1"
 
 # bindr = $mainMod, Z, exec, hyprctl hyprpaper wallpaper "eDP-1, /home/phantomwise/.config/hypr/wallpapers/The-addictive-game-of-pacman-goes-retro-by-ishan730-1147475-3840x2160.jpg" || hyprctl hyprpaper wallpaper "eDP-1, /home/phantomwise/.config/hypr/wallpapers/Final-1920x1080.png"
 
