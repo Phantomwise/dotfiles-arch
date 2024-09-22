@@ -338,6 +338,8 @@ bindsym $mod+Alt+Print exec grim -t png -g "$(slurp)" "$(xdg-user-dir PICTURES)/
     # ████████████████████████████████████████████████████████████║
     # ╚═══════════════════════════════════════════════════════════╝
 
+# NB: Doesn't work at startup before a manual config reload. Hyprpaper is launched but wallpaper not applied.
+
 # Toogle hyprpaper
 bindsym $mod+Shift+p exec killall hyprpaper || hyprpaper
 
@@ -352,9 +354,10 @@ bindsym $mod+Shift+z exec /home/phantomwise/git/dotfiles/arch/home/.config/sway/
 # bind = $mainMod SHIFT, T, exec, bash /home/phantomwise/dotfiles/arch/hypr/scripts/hyprpaper-set-random.sh
 # bind = $mainMod SHIFT, Y, exec, bash /home/phantomwise/dotfiles/arch/hypr/scripts/hyprpaper-set-random-v2.sh
 
-set $w1 = /home/phantomwise/Pictures/wallpapers/best/Final-1920x1080.png
+set $w1 = /home/phantomwise/.local/share/wallpapers/best/premium__retrowave__synthwave_kit_l_200_shape_by_hatimbahia_dea3c9g-414w-2x-800x480.jpg
+# set $w1 = /home/phantomwise/Pictures/wallpapers/best/premium__retrowave__synthwave_kit_l_200_shape_by_hatimbahia_deejybi-414w-2x-800x480.jpg
 set $w2 = /home/phantomwise/Pictures/wallpapers/best/wp7533094-4k-retro-night-wallpapers-3840x2160.jpg
-set $w3 = /home/phantomwise/Pictures/wallpapers/best/premium__retrowave__synthwave_kit_l_200_shape_by_hatimbahia_deejybi-414w-2x-800x480.jpg
+set $w3 = /home/phantomwise/Pictures/wallpapers/best/Final-1920x1080.png
 set $ws = /home/phantomwise/Pictures/wallpapers/The-addictive-game-of-pacman-goes-retro-by-ishan730-1147475-3840x2160.jpg
 
 bindsym $mod+z exec hyprpaper wallpaper "eDP-1, $ws" || hyprpaper wallpaper "eDP-1, $w1"
