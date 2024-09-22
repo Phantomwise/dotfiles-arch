@@ -421,7 +421,7 @@ Icon fonts :
 
 	"memory": {
 		"interval": 5,
-		"format": "{icon}  {}%",
+		"format": "{icon} {0}%",
 		"format-icons": "<span size='large' rise='-1500'></span>",
 		"tooltip":true,
 		"tooltip-format": "RAM: {used:0.1f} GiB used of {total:0.1f} GiB ({percentage}%)\nSWAP: {swapUsed} GiB used of {swapTotal} GiB ({swapPercentage}%)",
