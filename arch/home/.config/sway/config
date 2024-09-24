@@ -67,15 +67,6 @@
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 # or input <identifier>
@@ -87,6 +78,27 @@ input "type:keyboard" {
     # xkb_layout us,us,fr
     # xkb_variant colemak-kl,,
     xkb_options grp:alt_space_toggle
+}
+
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+
+input type:touchpad {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+}
+
+input "1133:49271:Logitech_USB_Optical_Mouse" {
+      # left_handed enabled
 }
 
 # ████████████████████████████████████████████████████████████╗
