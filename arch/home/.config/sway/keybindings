@@ -121,15 +121,15 @@ bindsym Ctrl+Alt+v exec $videoplayer
 # Start rofi
 bindsym $mod+r exec $runmenu
 bindsym $mod+d exec $drunmenu
-# bindsym $mod+b exec $filebrowsermenu
-bindsym $mod+h exec $sshmenu
+bindsym $mod+b exec $filebrowsermenu
+bindsym $mod+s exec $sshmenu
 bindsym $mod+m exec $emoji
 bindsym $mod+c exec $calc
 # bindsym $mod+l exec $powermenu
 bindsym Alt+Tab exec $windowmenu
 
 # Start/kill waybar
-bindsym $mod+Shift+w exec 'killall waybar || waybar --config ~/.config/waybar/config-sway.jsonc'
+bindsym $mod+Alt+w exec 'killall waybar || waybar --config ~/.config/waybar/config-sway.jsonc'
 
     # ████████████████████████████████████████████████████████████╗
     # █╔═════════════════════════════════════════════════════════█║
@@ -211,13 +211,13 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+b splith
+bindsym $mod+h splith
 bindsym $mod+v splitv
 
 # layout default|splith|splitv|stacking|tabbed
     # Sets the layout mode of the focused container.
 # bindsym $mod+d layout default
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
 
 # layout toggle [split|all]
@@ -344,7 +344,7 @@ bindsym $mod+Alt+Print exec grim -t png -g "$(slurp)" "$(xdg-user-dir PICTURES)/
         # output eDP-1
 
 ### Toogle swaybg
-bindsym $mod+Shift+p exec killall swaybg || swaybg
+bindsym $mod+Alt+p exec killall swaybg || swaybg
 
 ### Set random wallpaper
 set $wallpapers_best $HOME/.local/share/wallpapers/best
