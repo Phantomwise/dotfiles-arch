@@ -28,6 +28,21 @@ compinit
 
 # ███████████████████████████████████████████████████████████████╗
 # █╔════════════════════════════════════════════════════════════█║
+# █║░░░░░░░░░░░░░░░░░░░░░░ DOCUMENTATION ░░░░░░░░░░░░░░░░░░░░░░░█║
+# ███████████████████████████████████████████████████████████████║
+# ╚══════════════════════════════════════════════════════════════╝
+
+# User-friendly user guide
+# https://zsh.sourceforge.io/Doc/Release/zsh_toc.html
+
+# Manual
+# https://zsh.sourceforge.io/Guide/zshguide.html
+
+# Reference card
+# https://zsh.sourceforge.io/Refcard/
+
+# ███████████████████████████████████████████████████████████████╗
+# █╔════════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░░░░░ PROMPT ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
@@ -140,9 +155,11 @@ fi
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-# Making the following keys work : Home, End, Delete
+# Make the Home key work in the terminal
 bindkey  "^[[H"   beginning-of-line
+# Make the End key work in the terminal
 bindkey  "^[[F"   end-of-line
+# Make the Delete key work in the terminal
 bindkey  "^[[3~"  delete-char
 
 # ███████████████████████████████████████████████████████████████╗
@@ -157,14 +174,19 @@ SAVEHIST=10000
 
 # Save each command’s beginning timestamp (in seconds since the epoch) and the duration (in seconds) to the history file.
 setopt EXTENDED_HISTORY
+
 # This option both imports new commands from the history file, and also causes your typed commands to be appended to the history file (the latter is like specifying INC_APPEND_HISTORY, which should be turned off if this option is in effect). The history lines are also output with timestamps ala EXTENDED_HISTORY (which makes it easier to find the spot where we left off reading the file after it gets re-written). 
 setopt SHARE_HISTORY
+
 # Do not enter command lines into the history list if they are duplicates of the previous event.
 setopt HIST_IGNORE_DUPS
+
 # If a new command line being added to the history list duplicates an older one, the older command is removed from the list (even if it is not the previous event). 
 # HIST_IGNORE_ALL_DUPS
+
 # When writing out the history file, older commands that duplicate newer ones are omitted. 
 # HIST_SAVE_NO_DUPS
+
 # If the internal history needs to be trimmed to add the current command line, setting this option will cause the oldest history event that has a duplicate to be lost before losing a unique event from the list. You should be sure to set the value of HISTSIZE to a larger number than SAVEHIST in order to give you some room for the duplicated events, otherwise this option will behave just like HIST_IGNORE_ALL_DUPS once the history fills up with unique events. 
 setopt HIST_EXPIRE_DUPS_FIRST
 
@@ -182,11 +204,11 @@ fi
 
 # ███████████████████████████████████████████████████████████████╗
 # █╔════════════════════════════════════════════════════════════█║
-# █║░░░░░░░░░░░░░░░░░░░░░░░░░░░ ENV ░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+# █║░░░░░░░░░░░░░░░░░░░░░░ ENV VARIABLES ░░░░░░░░░░░░░░░░░░░░░░░█║
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-# Set a variable with the prefered emulator
+# Set a variable with the preferred emulator
 export TERMINAL="kitty"
 
 # Set ksshaskpass for askpass because the regular sshaskpass package is X11 only >_<
@@ -194,14 +216,16 @@ export SSH_ASKPASS=/usr/bin/ksshaskpass
 
 # ███████████████████████████████████████████████████████████████╗
 # █╔════════════════════════════════════════════════════════════█║
-# █║░░░░░░░░░░░░░░░░░░░░░░░░░░░ MISC ░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+# █║░░░░░░░░░░░░░░░░░░░░░░░░░ PLUGINS ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-# Activate zsh-syntax-highlinghting
+# Activate zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Activate zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Source emoji-cli plugin
 source /usr/share/zsh/plugins/emoji-cli/emoji-cli.zsh
 
