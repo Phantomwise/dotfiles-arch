@@ -80,12 +80,6 @@ fi
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-# Bypass the issue causing the current directory to be '/home/phantomwise/git/dotfiles/arch' instead of '/home/phantomwise/'
-    # To do: Find what is causing this and pix it.
-        # NB: Maybe GNU Stow? '/home/phantomwise/git/dotfiles/arch/home' is symlinked to '~' with Stow.
-    # Calling it a feature and commenting out the fix
-# cd ~
-
 # Check if running in a terminal emulator
 # NB: Change the check to look at $XDG_SESSION_TYPE = tty instead ?)
 if [[ -n "$TERM_PROGRAM" || -n "$COLORTERM" ]]; then
