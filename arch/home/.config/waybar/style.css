@@ -86,6 +86,7 @@ window#waybar {
 #clock.date,
 #window.class,
 #window.title,
+#window.shell,
 #battery,
 #temperature,
 #cpu,
