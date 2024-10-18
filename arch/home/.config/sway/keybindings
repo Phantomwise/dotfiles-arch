@@ -45,7 +45,9 @@ set $right i
 # Programs
 set $terminal kitty
 set $texteditor leafpad
-set $codeeditor vscodium
+# set $codeeditor vscodium
+set $codeeditor "vscodium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
+# set $codeeditor /usr/bin/codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland
 # set $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
 set $filemanager nemo
 set $webbrowser1 librewolf
