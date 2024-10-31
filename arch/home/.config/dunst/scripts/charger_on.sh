@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Send notification
 dunstify "Battery Charger Connected" "Laptop is now charging." -u normal -r 99114103 -i battery_plus

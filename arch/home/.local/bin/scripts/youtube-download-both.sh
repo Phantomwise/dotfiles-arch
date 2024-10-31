@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Author : ChatGPT (I'm very bad at coding -___-)
 # Description :

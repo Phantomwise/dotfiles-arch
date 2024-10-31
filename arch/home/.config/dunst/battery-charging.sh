@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Source : https://github.com/ericmurphyxyz/dotfiles/blob/master/.local/bin/battery-charging
 

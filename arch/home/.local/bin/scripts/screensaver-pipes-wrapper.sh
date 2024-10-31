@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Fake screensaver using pipes.c
 # Wrapper srcipt for pipes-fs.sh
 

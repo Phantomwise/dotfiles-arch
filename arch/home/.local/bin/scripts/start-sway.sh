@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
 # Force apps to use Wayland backend by default
     # Chromium applications

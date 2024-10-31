@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Get the current volume percentage
 VOLUME_OUTPUT=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)

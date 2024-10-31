@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Get the current brightness percentage
 BRIGHTNESS_PERCENTAGE=$(brightnessctl | grep -oP '\(\K[0-9]+(?=%)')

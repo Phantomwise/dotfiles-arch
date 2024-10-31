@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Check volume status using wpctl
 volume_status=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)

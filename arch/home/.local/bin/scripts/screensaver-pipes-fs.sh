@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Fake screensaver using pipes.c
 # Replace "hyprctl dispatch fullscreen 0" with whatever command makes the active window fullscreen on your system.
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Define ANSI color codes for different states
 green='\033[0;32m'
