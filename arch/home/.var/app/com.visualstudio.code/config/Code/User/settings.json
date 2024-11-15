@@ -3,5 +3,6 @@
     "git.openRepositoryInParentFolders": "always",
     "editor.tabSize": 4,
     "editor.detectIndentation": true,
-    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Hack Nerd Font'"
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Hack Nerd Font'",
+    "security.workspace.trust.untrustedFiles": "open"
 }
