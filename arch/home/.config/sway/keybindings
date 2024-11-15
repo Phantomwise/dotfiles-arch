@@ -50,6 +50,7 @@ set $codeeditor "vscodium --enable-features=UseOzonePlatform,WaylandWindowDecora
 # set $codeeditor /usr/bin/codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland
 # set $codeeditor code --enable-features=UseOzonePlatform --ozone-platform=wayland # VSCode in forced Wayland
 set $filemanager nemo
+set $office libreoffice
 set $webbrowser1 librewolf
 set $webbrowser2 waterfox
 set $webbrowser3 firefox
@@ -113,6 +114,7 @@ bindsym Ctrl+Alt+c exec $codeeditor
 bindsym Ctrl+Alt+f exec $filemanager
 bindsym Ctrl+Alt+l exec $webbrowser1
 # bindsym $mod+x exec $webbrowser2
+bindsym Ctrl+Alt+o exec $office
 bindsym Ctrl+Alt+w exec $webbrowser3
 bindsym Ctrl+Alt+m exec $audioplayer
 bindsym Ctrl+Alt+v exec $videoplayer
