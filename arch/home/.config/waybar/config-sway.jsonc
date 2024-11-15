@@ -248,6 +248,7 @@ Icon fonts :
 	"sway/window#shell": {
 		"format": "{shell}",
 		"max-length": 50,
+		/*
 		"rewrite": {
 			"xdg_shell": "XDG Shell",
 			"xwayland": "XWayland",
@@ -255,6 +256,7 @@ Icon fonts :
 			"fullscreen_shell": "Fullscreen Shell",
 			"layer_shell": "Layer Shell"
 		},
+		*/
 		"on-scroll-up": "swaymsg workspace prev",
 		"on-scroll-down": "swaymsg workspace next",
 		"tooltip":false
