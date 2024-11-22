@@ -117,6 +117,15 @@ fi
 # Set the default terminal emulator
 export TERMINAL="kitty"
 
+# Set the default editor based on the session type.
+if [ "$XDG_SESSION_TYPE" = "tty" ]; then
+    export EDITOR="vim" # Defaults to vi if not set
+    export VISUAL="vim" # Defaults to vi if not set
+else
+    export EDITOR="vim -y" # Don't run "vim -y" in the tty it's broken
+    export VISUAL="vim -y" # Don't run "vim -y" in the tty it's broken
+fi
+
 # Set ksshaskpass for askpass because the regular sshaskpass package is X11 only >_<
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
