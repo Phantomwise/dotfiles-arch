@@ -114,7 +114,7 @@ fi
 # ███████████████████████████████████████████████████████████████║
 # ╚══════════════════════════════════════════════════════════════╝
 
-# Set a variable with the prefered emulator
+# Set the default terminal emulator
 export TERMINAL="kitty"
 
 # Set ksshaskpass for askpass because the regular sshaskpass package is X11 only >_<
