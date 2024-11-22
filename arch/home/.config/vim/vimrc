@@ -1,0 +1,3 @@
+" Clipboard support
+" Doesn't work because the package does NOT have fucking CLIPBOARD SUPPORT enabled. In 2024. I. HATE. VIM. SO. MUCH.
+set clipboard=unnamedplus
