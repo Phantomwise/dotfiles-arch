@@ -33,7 +33,8 @@ fi
 # If the URL is a playlist, prompt the user to choose whether to download only the video or the full playlist
 if is_playlist "$url"; then
     echo -e "${info} This URL links to a playlist."
-    read -p "Do you want to download 1. only the video or 2. the full playlist? (Enter 1 or 2): " choice
+    read -p "Do you want to download 1. only the video or 2. the full playlist? (Enter 1 or 2, default is 1): " choice
+    choice=${choice:-1}
     if [[ $choice == "1" ]]; then
         url=$(echo "$url" | sed 's/\&list=.*/\&/g')
         # Remove trailing & or ? if they are left at the end
