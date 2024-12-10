@@ -36,9 +36,12 @@ if is_playlist "$url"; then
     read -p "Do you want to download 1. only the video or 2. the full playlist? (Enter 1 or 2): " choice
     choice=${choice:-1}
     if [[ $choice == "1" ]]; then
+        echo -e "${info} Downloading only the video."
         url=$(echo "$url" | sed 's/\&list=.*/\&/g')
         # Remove trailing & or ? if they are left at the end
         url=$(echo "$url" | sed 's/[?&]$//')
+    else
+        echo -e "${info} Downloading the full playlist."
     fi
 fi
 
