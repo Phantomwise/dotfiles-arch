@@ -107,8 +107,8 @@ bindsym $mod+Shift+m exec swaynag -t warning -m 'You pressed the exit shortcut. 
 
 # Applications
 bindsym $mod+Return exec $term
-bindsym $mod+x exec $terminal
-bindsym Ctrl+Alt+x exec $terminal
+bindsym $mod+z exec $terminal
+bindsym Ctrl+Alt+z exec $terminal
 bindsym Ctrl+Alt+t exec $texteditor
 bindsym Ctrl+Alt+c exec $codeeditor
 bindsym Ctrl+Alt+f exec $filemanager
@@ -124,6 +124,7 @@ bindsym Ctrl+Alt+v exec $videoplayer
 
 # Start rofi
 bindsym $mod+r exec $runmenu
+bindsym $mod+x exec $drunmenu
 bindsym $mod+d exec $drunmenu
 bindsym $mod+b exec $filebrowsermenu
 bindsym $mod+s exec $sshmenu
