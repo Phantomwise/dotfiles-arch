@@ -72,10 +72,8 @@
 # or input <identifier>
 
 input "type:keyboard" {
-    xkb_layout us,us
-    xkb_variant colemak-kl,
-    # xkb_variant ,
-    # xkb_layout us,us,fr
+    xkb_layout us,us,fr
+    xkb_variant ,colemak-kl,
     # xkb_variant colemak-kl,,
     xkb_options grp:alt_space_toggle
 }
