@@ -13,6 +13,7 @@ folders=(
     "$HOME/.cache/paru/clone/" # Paru cache
     "$HOME/.cache/yay/" # Yay cache
     "$HOME/.cache/mozilla/firefox/" # Firefox cache
+    "$HOME/.cache/waterfox/" # Waterfox cache
     "/var/cache/pacman/pkg/" # Pacman cache
     "/tmp" # Temporary files
     # "/var/log/"
