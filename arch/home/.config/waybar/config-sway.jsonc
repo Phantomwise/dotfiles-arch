@@ -505,14 +505,7 @@ Icon fonts :
 			]
 		},
 		"scroll-step": 5,
-		/*
-		"on-click": "pamixer -t",
-		*/
-		/* Doesn't work and takes very long to load : */
-		/*
-		"on-click": "wpctl set-mute -l 1.5 @DEFAULT_AUDIO_SINK@ toggle",
-		*/
-		/* Doesn't work (check command for pipewire) : */
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-click-right": "kitty pulsemixer",
 		"on-click-middle": "pavucontrol"
 	},
