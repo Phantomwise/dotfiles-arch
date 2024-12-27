@@ -513,7 +513,8 @@ Icon fonts :
 		"on-click": "wpctl set-mute -l 1.5 @DEFAULT_AUDIO_SINK@ toggle",
 		*/
 		/* Doesn't work (check command for pipewire) : */
-		"on-click-right": "pavucontrol"
+		"on-click-right": "kitty pulsemixer",
+		"on-click-middle": "pavucontrol"
 	},
 
 	/*
