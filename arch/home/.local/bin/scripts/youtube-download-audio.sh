@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Author : ChatGPT (I'm very bad at coding -___-)
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 # Description :
     # Runs yt-dlp to download the best audio format
     # Can download a single video or playlist
