@@ -55,6 +55,7 @@ function download_audio {
     echo -e "${err} Error while downloading audio."
 }
 
+# Define function to download the best video format with subtitles, using cookies from Firefox for restricted videos
 function download_video_w_sub {
     echo -e "${info} Running yt-dlp to download video with subtitles:"
     yt-dlp --cookies-from-browser firefox --write-subs --sub-langs "all" "$url" && \
