@@ -33,7 +33,7 @@ fi
 # If the URL is a playlist, prompt the user to choose whether to download only the video or the full playlist
 if is_playlist "$url"; then
     echo -e "${info} This URL links to a playlist."
-    read -p "Do you want to download 1. only the video or 2. the full playlist? (Enter 1 or 2): " choice
+    read -p "Do you want to download 1. only the video or 2. the full playlist? (Enter 1 or 2, default is 1): " choice
     choice=${choice:-1}
     if [[ $choice == "1" ]]; then
         echo -e "${info} Downloading only the video."
@@ -48,7 +48,7 @@ fi
 # Define function to download the best audio format
 function download_audio {
     echo -e "${info} Running yt-dlp to download the best audio format:"
-    yt-dlp -x --audio-format best "$url" && \
+    yt-dlp -x --cookies-from-browser firefox --audio-format best "$url" && \
     echo -e "${succ} Download audio successful." || \
     echo -e "${err} Error while downloading audio."
 }
