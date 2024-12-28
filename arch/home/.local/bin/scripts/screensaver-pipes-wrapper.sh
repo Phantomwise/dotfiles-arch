@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 # Fake screensaver using pipes.c
 # Wrapper srcipt for pipes-fs.sh
 

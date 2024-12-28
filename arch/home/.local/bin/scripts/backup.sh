@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Author : ChatGPT
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 # Description :
     # Creates a timestamped backup of a specified file or folder into ${HOME}/backup while preserving the folder stucture.
 

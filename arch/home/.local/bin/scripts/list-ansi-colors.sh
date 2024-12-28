@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Author : ChatGPT
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 # Description :
     # Lists colors available with ANSI escape codes.
     # Loops through color codes from 0 to 255 and prints a sample text in each color.

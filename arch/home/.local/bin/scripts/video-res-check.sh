@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 ## Script to find video files with a resolution below, above, or equal to a specified threshold
 
 # Ask for the resolution threshold with an operator

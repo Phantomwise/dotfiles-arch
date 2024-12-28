@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 # Define colors
 green='\033[0;32m'
 red='\033[0;31m'

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Author : ChatGPT
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 # Description :
     # Lists all ASCII (0-127) and extended ASCII (128-255) characters
 

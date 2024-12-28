@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 # Color codes
 red='\033[0;31m'
 yellow='\033[0;33m'

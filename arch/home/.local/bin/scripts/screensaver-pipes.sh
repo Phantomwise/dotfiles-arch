@@ -7,5 +7,5 @@
 # Replace "hyprctl dispatch fullscreen 0" with whatever command makes the active window fullscreen on your system.
 
 # Fullscreen the window and run cpipes
-hyprctl dispatch fullscreen 0
-cpipes -C ═║╗╝╚╔ -p 5
+kitty --detach cpipes -C ═║╗╝╚╔ -p 5
+# hyprctl dispatch fullscreen 0
