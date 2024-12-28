@@ -47,14 +47,6 @@ if is_playlist "$url"; then
     fi
 fi
 
-# Define function to download the best audio format
-function download_audio {
-    echo -e "${info} Running yt-dlp to download the best audio format:"
-    yt-dlp --cookies-from-browser firefox -x "$url" && \
-    echo -e "${succ} Download audio successful." || \
-    echo -e "${err} Error while downloading audio."
-}
-
 # Define function to download the best video format with subtitles, using cookies from Firefox for restricted videos
 function download_video_w_sub {
     echo -e "${info} Running yt-dlp to download video with subtitles:"
