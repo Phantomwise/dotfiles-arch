@@ -3,10 +3,10 @@
 # AI Disclaimer:
 # This script was written with help from a LLM.
 
-# Description :
-    # Runs yt-dlp to download the best audio format
-    # Can download a single video or playlist
-# Dependencies : yt-dlp
+# Description:
+# Runs yt-dlp to download the best audio format
+# Uses cookies from Firefox to download restricted videos
+# Required: yt-dlp
 
 # Define global variables for colored messages
 info="\033[1;33m[INFO]\033[0m"
