@@ -34,10 +34,18 @@ https://github.com/Alexays/Waybar/wiki
 
 /*
 Fonts :
-	dungeon regular
+	- dungeon regular
 Icon fonts :
-	Font Awesome
-	Nerd Fonts
+	- Font Awesome
+	- Nerd Fonts
+Packages :
+	- pavucontro
+	- kitty
+	- btop
+	- ncdu
+	- networkmanager
+	- pulsemixer
+	- pavucontrol
 */
 
 /*
