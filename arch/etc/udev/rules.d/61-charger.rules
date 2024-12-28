@@ -1,0 +1,11 @@
+# Rule for charger plugged in
+ACTION=="change", \
+SUBSYSTEM=="power_supply", \
+ATTR{online}=="1", \
+RUN+="/bin/sh -c 'echo $(date) Charger connected >> /tmp/udev-61-charger-rules.log'"
+
+# Rule for charger unplugged
+ACTION=="change", \
+SUBSYSTEM=="power_supply", \
+ATTR{online}=="0", \
+RUN+="/bin/sh -c 'echo $(date) Charger disconnected >> /tmp/udev-61-charger-rules.log'"
