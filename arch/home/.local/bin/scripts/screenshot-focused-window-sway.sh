@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # Get the geometry of the focused window
 geometry=$(swaymsg -t get_tree | jq -r 'recurse(.nodes[]?, .floating_nodes[]?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')
 
