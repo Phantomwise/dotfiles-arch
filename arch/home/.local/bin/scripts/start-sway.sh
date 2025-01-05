@@ -32,4 +32,4 @@ export SDL_VIDEODRIVER=wayland
 export XDG_CURRENT_DESKTOP=sway
 
 # redirect stdout/stderr to a log file
-exec sway > ~/.config/sway/sway.log 2>&1
+exec sway > ~/.cache/sway.log 2>&1
