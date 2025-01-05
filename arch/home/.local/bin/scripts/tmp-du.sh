@@ -13,14 +13,18 @@ nc='\033[0m' # No Color
 folders=(
     "$HOME/.local/share/Trash/" # Trash folder
     "$HOME/.cache/" # Cache
-    "$HOME/.cache/paru/clone/" # Paru cache
-    "$HOME/.cache/yay/" # Yay cache
+    "$HOME/.cache/aura/" # Aura cache
+    "$HOME/.cache/calibre/" # Calibre cache
+    "$HOME/.cache/Google/" # Google cache
+    "$HOME/.cache/thumbnails/" # Thumbnail cache
     "$HOME/.cache/mozilla/firefox/" # Firefox cache
+    "$HOME/.cache/paru/clone/" # Paru cache
     "$HOME/.cache/waterfox/" # Waterfox cache
+    "$HOME/.cache/winetricks/" # Winetricks cache
+    "$HOME/.cache/yay/" # Yay cache
     "/var/cache/pacman/pkg/" # Pacman cache
     "/tmp" # Temporary files
     # "/var/log/"
-    "$HOME/.cache/thumbnails/"
 )
 
 # Calculate the maximum length of folder paths
