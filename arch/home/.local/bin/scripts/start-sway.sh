@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Not made by AI \o/
+
 # Force apps to use Wayland backend by default
     # Chromium applications
 export OZONE_PLATFORM=wayland
