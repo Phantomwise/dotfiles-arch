@@ -21,7 +21,7 @@ export MOZ_ENABLE_WAYLAND=1
     # SDL applications
 export SDL_VIDEODRIVER=wayland
 
-# No clue what that is
+# No clue what that is, found it somewhere on reddit, I'll have to check what it does and if I need it
     # export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
     # export QT_QPA_PLATFORMTHEME=qt5ct
     # export QT_STYLE_OVERRIDE=kvantum
