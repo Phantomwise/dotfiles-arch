@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 import os
 import curses
 import subprocess
