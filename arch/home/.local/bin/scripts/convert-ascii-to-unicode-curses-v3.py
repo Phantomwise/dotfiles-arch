@@ -6,15 +6,15 @@
 import os
 import curses
 import subprocess
-import json
+import yaml
 
 # Determine the directory of the script
 script_dir = os.path.dirname(os.path.realpath(__file__))
-json_file_path = os.path.join(script_dir, 'convert-ascii-to-unicode-curses-v2.json')
+yaml_file_path = os.path.join(script_dir, 'convert-ascii-to-unicode-curses-v3.yaml')
 
-# Load the JSON file
-with open(json_file_path, 'r') as file:
-    data = json.load(file)
+# Load the YAML file
+with open(yaml_file_path, 'r') as file:
+    data = yaml.safe_load(file)
 
 # Create a dictionary to map ASCII characters to their Unicode equivalents for each style
 styles = {}
