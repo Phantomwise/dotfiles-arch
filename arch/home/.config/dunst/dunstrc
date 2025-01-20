@@ -473,7 +473,7 @@ fi
     override_pause_level = 60
     # Icon for notifications with critical urgency, uncomment to enable
     default_icon = warning-white
-    script = "/home/phantomwise/.config/dunst/play-sound-critical.sh"
+    script = "$HOME/.local/bin/scripts/dunst/play-sound-critical.sh"
         # NB: Needs absolute path, '~' and '$HOME' not working
         # NB: Several hours wasted and I still can't run a script with arguments in dunst. Giving up, try again later.
         # NOW WORKING !!!
