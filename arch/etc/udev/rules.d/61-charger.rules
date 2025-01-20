@@ -2,10 +2,10 @@
 ACTION=="change", \
 SUBSYSTEM=="power_supply", \
 ATTR{online}=="1", \
-RUN+="/bin/sh -c 'echo $(date) Charger connected >> /tmp/udev-61-charger-rules.log'"
+RUN+="/home/phantomwise/.local/bin/scripts/dunst/charger_notifications_udev.sh connected"
 
 # Rule for charger unplugged
 ACTION=="change", \
 SUBSYSTEM=="power_supply", \
 ATTR{online}=="0", \
-RUN+="/bin/sh -c 'echo $(date) Charger disconnected >> /tmp/udev-61-charger-rules.log'"
+RUN+="/home/phantomwise/.local/bin/scripts/dunst/charger_notifications_udev.sh disconnected"
