@@ -1,5 +1,6 @@
 #!/bin/bash
 
+logfile="/tmp/charger_notifications_udev.log"
 lockfile="/tmp/charger_notifications_udev.lock"
 statefile="/tmp/charger_state"
 
@@ -31,7 +32,7 @@ statefile="/tmp/charger_state"
     # Only proceed if the state has changed
     if [ "$charger_status" != "$last_status" ]; then
         # Log the event
-        echo "$(date) $charger_status" >> /tmp/udev-61-charger-rules.log
+        echo "$(date) $charger_status" >> $logfile
 
         # Get the user who is currently logged in
         user=$(who | awk '{print $1}' | head -n 1)
