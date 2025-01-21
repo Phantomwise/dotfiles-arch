@@ -3,4 +3,3 @@ Description=Battery Level Notification
 
 [Service]
 ExecStart=/home/phantomwise/.local/bin/scripts/dunst/battery-alert.sh
-ExecStartPost=/bin/systemctl --user start battery-alert.service
