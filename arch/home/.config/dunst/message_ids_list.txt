@@ -1,0 +1,3 @@
+98114105    Brightness
+99114103    Charger
+118111108   Volume
