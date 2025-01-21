@@ -18,10 +18,10 @@ fi
 echo "$(date) $charger_status" >> /tmp/udev-61-charger-rules.log
 
 # Get the user who is currently logged in
-USER=$(who | awk '{print $1}' | head -n 1)
+user=$(who | awk '{print $1}' | head -n 1)
 
 # Export the DBUS_SESSION_BUS_ADDRESS
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $USER)/bus"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $user)/bus"
 
 # Run dunstify as the logged-in user with a specific message ID and icon
-su -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS dunstify -r '$message_id' -i '$icon' 'Charger' 'Charger $charger_status'" $USER
+su -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS dunstify -r '$message_id' -i '$icon' 'Charger' 'Charger $charger_status'" $user
