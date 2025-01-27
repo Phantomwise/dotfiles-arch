@@ -627,13 +627,13 @@ fi
 
 [override-charger-connected]
         category = charger.connected
-        default_icon = charger-plugged
+        default_icon = charger-connected
         script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
         # id = 99114103
 
 [override-charger-disconnected]
         category = charger.disconnected
-        default_icon = charger-unplugged
+        default_icon = charger-disconnected
         script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
         # id = 99114103
 

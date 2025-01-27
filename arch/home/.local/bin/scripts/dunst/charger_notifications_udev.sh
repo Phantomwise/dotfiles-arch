@@ -12,12 +12,12 @@ statefile="/tmp/charger_state"
     if [ "$1" == "connected" ]; then
         charger_status="connected"
         category="charger.connected"
-        # icon="charger-plugged"
+        # icon="charger-connected"
         message_id="99114103"
     elif [ "$1" == "disconnected" ]; then
         charger_status="disconnected"
         category="charger.disconnected"
-        # icon="charger-unplugged"
+        # icon="charger-disconnected"
         message_id="99114103"
     else
         echo "Invalid argument. Use 'connected' or 'disconnected'."
