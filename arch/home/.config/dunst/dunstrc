@@ -493,6 +493,32 @@ fi
 #░███████████████████████████████████████████████████████████████║
 #░╚══════════════════════════════════════════════════════════════╝
 
+[override-brightness]
+        category = brightness
+        default_icon = brightness
+        word_wrap = false
+        # id = 98114105
+
+[override-volume.change]
+        category = volume.change
+        default_icon = volume-medium
+        word_wrap = false
+        # id = 118111108
+
+[override-volume.mute]
+        category = volume.mute
+        default_icon = volume-mute
+        word_wrap = false
+        # id = 118111108
+
+[override-volume.unmute]
+        category = volume.unmute
+        default_icon = volume-unmute
+        word_wrap = false
+        # id = 118111108
+
+### TO REDO ###
+
 # [override-charger]
         # title = "Charger"
         # script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
@@ -504,20 +530,6 @@ fi
 [override-charger-disconnected]
         body = "Charger disconnected"
         script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
-
-[override-volume]
-        body = Volume*
-        # id = 118111108
-        default_icon = volume-medium
-        # default_icon = ~/.local/share/icons/svg/volume-medium.svg
-        word_wrap = false
-
-[override-brightness]
-        body = Brightness*
-        # id = 98114105
-        default_icon = brightness
-        # default_icon = ~/.local/share/icons/svg/brightness.svg
-        word_wrap = false
 
 [change-format-dunstify]
 
