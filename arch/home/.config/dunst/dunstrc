@@ -428,10 +428,15 @@ fi
 
 #░███████████████████████████████████████████████████████████████╗
 #░█╔════════════════════════════════════════════════════════════█║
-#░█║░░░░░░░░░░░░░░░░░░░░░░░░░ URGENCY ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
-#░█║░░░░░░░░░░░░░░░░░░░░░░░░░░░ LOW ░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+#░█║░░░░░░░░░░░░░░░░░░░░░░░░░░ RULES ░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
 #░███████████████████████████████████████████████████████████████║
 #░╚══════════════════════════════════════════════════════════════╝
+
+    #░███████████████████████████████████████████████████████████████╗
+    #░█╔════════════════════════════════════════════════════════════█║
+    #░█║░░░░░░░░░░░░░░░░░░░░░░░░░ URGENCY ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+    #░███████████████████████████████████████████████████████████████║
+    #░╚══════════════════════════════════════════════════════════════╝
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
@@ -442,13 +447,6 @@ fi
     # Icon for notifications with low urgency, uncomment to enable
     default_icon = bell-white
 
-#░███████████████████████████████████████████████████████████████╗
-#░█╔════════════════════════════════════════════════════════════█║
-#░█║░░░░░░░░░░░░░░░░░░░░░░░░░ URGENCY ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
-#░█║░░░░░░░░░░░░░░░░░░░░░░░░░░ NORMAL ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
-#░███████████████████████████████████████████████████████████████║
-#░╚══════════════════════════════════════════════════════════════╝
-
 [urgency_normal]
     background = "#004BAA"
     foreground = "#ffffff"
@@ -456,13 +454,6 @@ fi
     override_pause_level = 30
     # Icon for notifications with normal urgency, uncomment to enable
     default_icon = bell-white
-
-#░███████████████████████████████████████████████████████████████╗
-#░█╔════════════════════════════════════════════════════════════█║
-#░█║░░░░░░░░░░░░░░░░░░░░░░░░░ URGENCY ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
-#░█║░░░░░░░░░░░░░░░░░░░░░░░░░ CRITICAL ░░░░░░░░░░░░░░░░░░░░░░░░░█║
-#░███████████████████████████████████████████████████████████████║
-#░╚══════════════════════════════════════════════════════════════╝
 
 [urgency_critical]
     background = "#900000"
@@ -487,67 +478,11 @@ fi
         # Links
             # https://github.com/dunst-project/dunst/issues/257
 
-#░███████████████████████████████████████████████████████████████╗
-#░█╔════════════════════════════════════════════════════════════█║
-#░█║░░░░░░░░░░░░░░░░░░░░░░░░░ OVERRIDE ░░░░░░░░░░░░░░░░░░░░░░░░░█║
-#░███████████████████████████████████████████████████████████████║
-#░╚══════════════════════════════════════════════════════════════╝
-
-[override-brightness]
-        category = brightness
-        default_icon = brightness
-        word_wrap = false
-        # id = 98114105
-
-[override-volume.change]
-        category = volume.change
-        default_icon = volume-medium
-        word_wrap = false
-        # id = 118111108
-
-[override-volume.mute]
-        category = volume.mute
-        default_icon = volume-mute
-        word_wrap = false
-        # id = 118111108
-
-[override-volume.unmute]
-        category = volume.unmute
-        default_icon = volume-unmute
-        word_wrap = false
-        # id = 118111108
-
-### TO REDO ###
-
-# [override-charger]
-        # title = "Charger"
-        # script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
-
-[override-charger-connected]
-        body = "Charger connected"
-        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
-
-[override-charger-disconnected]
-        body = "Charger disconnected"
-        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
-
-[change-format-dunstify]
-
-        appname = dunstify
-        format = "<b>%s</b>\n<i>%b</i>\n<i>dunstify</i>"
-
-[change-format-discord]
-        desktop_entry = Discord
-        default_icon = ~/.local/share/icons/svg/apps/discord-white.svg
-
-[change-format-firefox]
-        desktop_entry = Firefox
-        default_icon = ~/.local/share/icons/svg/apps/firefox-white.svg
-
-# Testing
-[change-format-firefoxwb]
-        desktop_entry = 'Firefox Web Browser'
-        default_icon = ~/.local/share/icons/svg/apps/firefox-black.svg
+    #░███████████████████████████████████████████████████████████████╗
+    #░█╔════════════════════════════════════════════════════════════█║
+    #░█║░░░░░░░░░░░░░░░░░░░░░░░░░░ CUSTOM ░░░░░░░░░░░░░░░░░░░░░░░░░░█║
+    #░███████████████████████████████████████████████████████████████║
+    #░╚══════════════════════════════════════════════════════════════╝
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
@@ -677,6 +612,80 @@ fi
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+
+    #░███████████████████████████████████████████████████████████████╗
+    #░█╔════════════════════════════════════════════════════════════█║
+    #░█║░░░░░░░░░░░░░░░░░░░░░░░░░ CATEGORY ░░░░░░░░░░░░░░░░░░░░░░░░░█║
+    #░███████████████████████████████████████████████████████████████║
+    #░╚══════════════════════════════════════════════════════════════╝
+
+[override-brightness]
+        category = brightness
+        default_icon = brightness
+        word_wrap = false
+        # id = 98114105
+
+[override-volume.change]
+        category = volume.change
+        default_icon = volume-medium
+        word_wrap = false
+        # id = 118111108
+
+[override-volume.mute]
+        category = volume.mute
+        default_icon = volume-mute
+        word_wrap = false
+        # id = 118111108
+
+[override-volume.unmute]
+        category = volume.unmute
+        default_icon = volume-unmute
+        word_wrap = false
+        # id = 118111108
+
+    #░███████████████████████████████████████████████████████████████╗
+    #░█╔════════════════════════════════════════════════════════════█║
+    #░█║░░░░░░░░░░░░░░░░░░░░░░░ APPLICATION ░░░░░░░░░░░░░░░░░░░░░░░░█║
+    #░███████████████████████████████████████████████████████████████║
+    #░╚══════════════════════════════════════════════════════════════╝
+
+[change-format-discord]
+        desktop_entry = Discord
+        default_icon = ~/.local/share/icons/svg/apps/discord-white.svg
+
+[change-format-firefox]
+        desktop_entry = Firefox
+        default_icon = ~/.local/share/icons/svg/apps/firefox-white.svg
+
+# Testing
+[change-format-firefoxwb]
+        desktop_entry = 'Firefox Web Browser'
+        default_icon = ~/.local/share/icons/svg/apps/firefox-black.svg
+
+    #░███████████████████████████████████████████████████████████████╗
+    #░█╔════════════════════════════════════════════════════════════█║
+    #░█║░░░░░░░░░░░░░░░░░░░░░░░░░ UNSORTED ░░░░░░░░░░░░░░░░░░░░░░░░░█║
+    #░███████████████████████████████████████████████████████████████║
+    #░╚══════════════════════════════════════════════════════════════╝
+
+### TO REDO ###
+
+# [override-charger]
+        # title = "Charger"
+        # script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
+
+[override-charger-connected]
+        body = "Charger connected"
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
+
+[override-charger-disconnected]
+        body = "Charger disconnected"
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
+
+[change-format-dunstify]
+
+        appname = dunstify
+        format = "<b>%s</b>\n<i>%b</i>\n<i>dunstify</i>"
 
 #░███████████████████████████████████████████████████████████████╗
 #░█╔════════════════════════════════════════════════════════════█║
