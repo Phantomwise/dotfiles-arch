@@ -52,7 +52,7 @@ function download_video_w_sub {
     echo -e "${info} Running yt-dlp to download video with subtitles:"
     yt-dlp --cookies-from-browser firefox --write-subs --sub-langs "all" "$url" && \
     echo -e "${succ} Download video with subtitles successful." || \
-    echo -e "${err} Error while downloading video with subtitles."
+    { echo -e "${err} Error while downloading video with subtitles."; return 1; }
 }
 
 # Run each command in order, continue on failure
