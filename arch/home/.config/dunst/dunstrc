@@ -625,6 +625,18 @@ fi
         word_wrap = false
         # id = 98114105
 
+[override-charger-connected]
+        category = charger.connected
+        default_icon = charger-plugged
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
+        # id = 99114103
+
+[override-charger-disconnected]
+        category = charger.disconnected
+        default_icon = charger-unplugged
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
+        # id = 99114103
+
 [override-volume.change]
         category = volume.change
         default_icon = volume-medium
@@ -673,14 +685,6 @@ fi
 # [override-charger]
         # title = "Charger"
         # script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
-
-[override-charger-connected]
-        body = "Charger connected"
-        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
-
-[override-charger-disconnected]
-        body = "Charger disconnected"
-        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
 
 [change-format-dunstify]
 

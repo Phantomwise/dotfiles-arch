@@ -11,11 +11,13 @@ statefile="/tmp/charger_state"
     # Check the argument
     if [ "$1" == "connected" ]; then
         charger_status="connected"
-        icon="charger-plugged"
+        category="charger.connected"
+        # icon="charger-plugged"
         message_id="99114103"
     elif [ "$1" == "disconnected" ]; then
         charger_status="disconnected"
-        icon="charger-unplugged"
+        category="charger.disconnected"
+        # icon="charger-unplugged"
         message_id="99114103"
     else
         echo "Invalid argument. Use 'connected' or 'disconnected'."
@@ -41,7 +43,7 @@ statefile="/tmp/charger_state"
         export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $user)/bus"
 
         # Run dunstify as the logged-in user with a specific message ID and icon
-        su -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS dunstify -r '$message_id' -i '$icon' 'Charger' 'Charger $charger_status'" $user
+        su -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS dunstify -r '$message_id' 'Charger' 'Charger $charger_status' -h 'string:category:$category'" $user
 
         # Update the state file
         echo "$charger_status" > "$statefile"
