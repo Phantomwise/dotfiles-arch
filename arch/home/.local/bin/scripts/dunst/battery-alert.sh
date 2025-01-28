@@ -24,13 +24,13 @@ fi
 # Check battery levels and send notifications
 if [ -n "$battery_level" ]; then
     if [ "$battery_level" -le $critical_level ] && [ "$battery_discharging" -eq 1 ]; then
-        notify-send "Battery Critical" "The computer will shutdown soon." -u critical -i "battery-v-alert" -r 9991
+        dunstify "Battery Critical" "The computer will shutdown soon." -u critical -i "battery-v-alert" -r 9991 -h int:value:"${battery_level}" -h "string:hlcolor:#FFFFFF"
         touch $critical_file
     elif [ "$battery_level" -le $warning_level ] && [ "$battery_discharging" -eq 1 ] && [ ! -f $low_file ]; then
-        notify-send "Low Battery" "${battery_level}% of battery remaining." -u normal -i "battery-v-alert" -r 9991
+        dunstify "Low Battery" "${battery_level}% of battery remaining." -u normal -i "battery-v-alert" -r 9991 -h int:value:"${battery_level}" -h "string:hlcolor:#FFFFFF"
         touch $low_file
     elif [ "$battery_level" -gt 99 ] && [ "$battery_discharging" -eq 0 ] && [ ! -f $full_file ]; then
-        notify-send "Battery Charged" "Battery is fully charged." -u normal -i "battery-v-100" -r 9991
+        dunstify "Battery Charged" "Battery is fully charged." -u normal -i "battery-v-100" -r 9991 -h int:value:"${battery_level}" -h "string:hlcolor:#FFFFFF"
         touch $full_file
     fi
 fi
