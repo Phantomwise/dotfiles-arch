@@ -619,6 +619,21 @@ fi
     #░███████████████████████████████████████████████████████████████║
     #░╚══════════════════════════════════════════════════════════════╝
 
+[override-battery-critical]
+        category = battery.full
+        default_icon = battery-v-100
+        # id = 9991
+
+[override-battery-low]
+        category = battery.low
+        default_icon = battery-v-020
+        # id = 9991
+
+[override-battery-full]
+        category = battery.critical
+        default_icon = battery-v-alert
+        # id = 9991
+
 [override-brightness]
         category = brightness
         default_icon = brightness
@@ -663,11 +678,11 @@ fi
 
 [change-format-discord]
         desktop_entry = Discord
-        default_icon = ~/.local/share/icons/svg/apps/discord-white.svg
+        default_icon = app-discord
 
 [change-format-firefox]
         desktop_entry = Firefox
-        default_icon = ~/.local/share/icons/svg/apps/firefox-white.svg
+        default_icon = app-firefox
 
 # Testing
 [change-format-firefoxwb]
