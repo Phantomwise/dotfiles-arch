@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 export DISPLAY=:0
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# AI Disclaimer:
+# This script was written with help from a LLM.
+
 logfile="/tmp/charger_notifications_udev.log"
 lockfile="/tmp/charger_notifications_udev.lock"
 statefile="/tmp/charger_state"
