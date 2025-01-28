@@ -1,0 +1,9 @@
+# Rule for device plugged in
+ACTION=="add", \
+SUBSYSTEM=="usb", \
+RUN+="/home/phantomwise/.local/bin/scripts/dunst/usb_notifications_udev.sh connected"
+
+# Rule for device unplugged
+ACTION=="remove", \
+SUBSYSTEM=="usb", \
+RUN+="/home/phantomwise/.local/bin/scripts/dunst/usb_notifications_udev.sh disconnected"
