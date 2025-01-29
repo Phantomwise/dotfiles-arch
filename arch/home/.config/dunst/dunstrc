@@ -652,6 +652,18 @@ fi
         script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
         # id = 99114103
 
+[override-device-mouse-connected]
+        body = "*Mouse* connected*"
+        default_icon = device-mouse
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
+        # id = 117115066
+
+[override-device-mouse-disconnected]
+        body = "*Mouse* disconnected*"
+        default_icon = device-mouse
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
+        # id = 117115066
+
 [override-volume.change]
         category = volume.change
         default_icon = volume-medium

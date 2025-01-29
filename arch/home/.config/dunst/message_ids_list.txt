@@ -1,3 +1,4 @@
 98114105    Brightness
 99114103    Charger
+117115066   USB
 118111108   Volume
