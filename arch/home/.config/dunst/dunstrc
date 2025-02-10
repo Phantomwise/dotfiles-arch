@@ -652,6 +652,18 @@ fi
         script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
         # id = 99114103
 
+[override-device-keyboard-connected]
+        body = "*Keyboard* connected*"
+        default_icon = device-keyboard
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
+        # id = 117115066
+
+[override-device-keyboard-disconnected]
+        body = "*Keyboard* disconnected*"
+        default_icon = device-keyboard
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
+        # id = 117115066
+
 [override-device-mouse-connected]
         body = "*Mouse* connected*"
         default_icon = device-mouse
@@ -663,6 +675,16 @@ fi
         default_icon = device-mouse
         script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
         # id = 117115066
+
+[override-device-flash-drive-connected]
+        body = "*Flash Drive* connected*"
+        default_icon = device-flash-drive
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
+
+[override-device-flash-drive-disconnected]
+        body = "*Flash Drive* disconnected*"
+        default_icon = _warning
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
 
 [override-volume.change]
         category = volume.change
