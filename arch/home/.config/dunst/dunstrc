@@ -620,18 +620,18 @@ fi
     #░╚══════════════════════════════════════════════════════════════╝
 
 [override-battery-critical]
-        category = battery.full
-        default_icon = battery-v-100
+        category = battery-100-charging
+        default_icon = battery-100
         # id = 9991
 
 [override-battery-low]
         category = battery.low
-        default_icon = battery-v-020
+        default_icon = battery-025
         # id = 9991
 
 [override-battery-full]
         category = battery.critical
-        default_icon = battery-v-alert
+        default_icon = battery-010
         # id = 9991
 
 [override-brightness]
