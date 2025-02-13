@@ -652,6 +652,18 @@ fi
         script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
         # id = 99114103
 
+[override-device-floppy-connected]
+        body = "*Floppy* connected*"
+        default_icon = device-floppy
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-connect.sh"
+        # id = 117115066
+
+[override-device-floppy-disconnected]
+        body = "*Floppy* disconnected*"
+        default_icon = device-floppy
+        script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
+        # id = 117115066
+
 [override-device-keyboard-connected]
         body = "*Keyboard* connected*"
         default_icon = device-keyboard
