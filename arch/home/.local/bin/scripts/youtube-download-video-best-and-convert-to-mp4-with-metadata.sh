@@ -65,14 +65,28 @@ function convert_to_mp4_with_metadata {
     artist=$(yt-dlp --get-filename -o "%(uploader)s" "$url")
     date=$(yt-dlp --get-filename -o "%(upload_date)s" "$url")
     description=$(yt-dlp --get-filename -o "%(description)s" "$url")
-    ffmpeg -i "$input_file" -c:v copy -c:a copy \
-           -metadata title="$title" \
-           -metadata artist="$artist" \
-           -metadata date="$date" \
-           -metadata comment="$description" \
-           "$output_file" && \
-    echo -e "${succ} Conversion to mp4 with metadata successful." || \
-    echo -e "${err} Error while converting to mp4 with metadata."
+
+    if [[ "${input_file##*.}" == "mp4" ]]; then
+        original_file="${input_file%.*}-original.mp4"
+        cp "$input_file" "$original_file"
+        ffmpeg -y -i "$original_file" -c:v copy -c:a copy \
+               -metadata title="$title" \
+               -metadata artist="$artist" \
+               -metadata date="$date" \
+               -metadata comment="$description" \
+               "$output_file" && \
+        echo -e "${succ} Metadata added to mp4 file successfully." || \
+        echo -e "${err} Error while adding metadata to mp4 file."
+    else
+        ffmpeg -i "$input_file" -c:v copy -c:a copy \
+               -metadata title="$title" \
+               -metadata artist="$artist" \
+               -metadata date="$date" \
+               -metadata comment="$description" \
+               "$output_file" && \
+        echo -e "${succ} Conversion to mp4 with metadata successful." || \
+        echo -e "${err} Error while converting to mp4 with metadata."
+    fi
 }
 
 # Run each command in order, continue on failure
