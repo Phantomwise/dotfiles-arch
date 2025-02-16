@@ -13,6 +13,10 @@
 info="\033[1;33m[INFO]\033[0m"
 succ="\033[1;32m[SUCCESS]\033[0m"
 err="\033[1;31m[ERROR]\033[0m"
+yellow="\033[0;33m"
+green="\033[0;32m"
+red="\033[0;31m"
+reset="\033[0m"
 
 # Ask user for input using readline for better handling of interactive input
 read -e -p "Enter YouTube URL or ID: " input
@@ -60,7 +64,7 @@ function download_video_w_sub {
 function convert_to_mp4_with_metadata {
     input_file="$1"
     output_file="${input_file%.*}.mp4"
-    echo -e "${info} Converting $input_file to $output_file using ffmpeg and adding metadata:"
+    echo -e "${info} Converting ${yellow}$input_file${reset} to ${yellow}$output_file${reset} using ffmpeg and adding metadata:"
     title=$(yt-dlp --get-filename -o "%(title)s" "$url")
     artist=$(yt-dlp --get-filename -o "%(uploader)s" "$url")
     date=$(yt-dlp --get-filename -o "%(upload_date)s" "$url")
@@ -75,8 +79,8 @@ function convert_to_mp4_with_metadata {
                -metadata date="$date" \
                -metadata comment="$description" \
                "$output_file" && \
-        echo -e "${succ} Metadata added to mp4 file successfully." || \
-        echo -e "${err} Error while adding metadata to mp4 file."
+        echo -e "${succ} Metadata added to mp4 file successfully : ${green}$output_file${reset}" || \
+        echo -e "${err} Error while adding metadata to mp4 file : ${red}$output_file${reset}"
     else
         ffmpeg -i "$input_file" -c:v copy -c:a copy \
                -metadata title="$title" \
@@ -84,8 +88,8 @@ function convert_to_mp4_with_metadata {
                -metadata date="$date" \
                -metadata comment="$description" \
                "$output_file" && \
-        echo -e "${succ} Conversion to mp4 with metadata successful." || \
-        echo -e "${err} Error while converting to mp4 with metadata."
+        echo -e "${succ} Conversion to mp4 with metadata successful : ${green}$output_file${reset}." || \
+        echo -e "${err} Error while converting to mp4 with metadata : ${red}$output_file${reset}"
     fi
 }
 
