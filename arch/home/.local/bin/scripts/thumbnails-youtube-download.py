@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# AI Disclaimer:
+# This script was written by Github Copilot.
+
 import os
 import re
 import requests
