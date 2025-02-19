@@ -1,8 +1,14 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import os
 import re
 import requests
+
+# ANSI escape codes for colors
+RED = '\033[91m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+RESET = '\033[0m'
 
 def extract_video_id(filename):
     # Extracts the YouTube video ID from the filename using a regular expression
@@ -24,16 +30,16 @@ def download_thumbnail(video_id, save_path):
                 # If the response is successful, save the thumbnail to the specified path
                 with open(save_path, 'wb') as file:
                     file.write(response.content)
-                print(f'Thumbnail downloaded for video ID: {video_id} at resolution: {resolution}')
+                print(f'{GREEN}Thumbnail downloaded for video ID: {video_id} at resolution: {resolution}{RESET}')
                 return
             else:
                 # If the response is not successful, print an error message with the status code
-                print(f'Failed to download thumbnail for video ID: {video_id} at resolution: {resolution}, HTTP status code: {response.status_code}')
+                print(f'{RED}Failed to download thumbnail for video ID: {video_id} at resolution: {resolution}, HTTP status code: {response.status_code}{RESET}')
         except requests.exceptions.RequestException as e:
             # If there is a network-related error, print an exception message
-            print(f'Exception occurred while downloading thumbnail for video ID: {video_id} at resolution: {resolution}, Exception: {e}')
+            print(f'{RED}Exception occurred while downloading thumbnail for video ID: {video_id} at resolution: {resolution}, Exception: {e}{RESET}')
     # If all attempts fail, print a message indicating that all attempts failed
-    print(f'All attempts failed for video ID: {video_id}')
+    print(f'{RED}All attempts failed for video ID: {video_id}{RESET}')
 
 def main():
     # Set of video file extensions to look for
@@ -47,13 +53,14 @@ def main():
             # Extract the video ID from the filename
             video_id = extract_video_id(filename)
             if video_id:
-                # Construct the path to save the thumbnail
-                save_path = os.path.join(current_directory, f'{video_id}.jpg')
+                # Construct the path to save the thumbnail with '-poster' appended to the original filename
+                base_name = os.path.splitext(filename)[0]
+                save_path = os.path.join(current_directory, f'{base_name}-poster.jpg')
                 # Attempt to download the thumbnail
                 download_thumbnail(video_id, save_path)
             else:
                 # If no video ID is found in the filename, print a message
-                print(f'No video ID found in filename: {filename}')
+                print(f'{YELLOW}No video ID found in filename: {filename}{RESET}')
 
 if __name__ == "__main__":
     # Entry point of the script
