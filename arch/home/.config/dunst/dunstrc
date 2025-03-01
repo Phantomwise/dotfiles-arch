@@ -105,11 +105,6 @@
 
     # Corner radius for the progress bar. 0 disables rounded corners.
     progress_bar_corner_radius = 0
-# Separate config to add directories to $PATH in both bashrc and zshrc without having duplicates.
-# Sourced by both bashrc and zshrc
-if [ -f "$HOME/.config/shell/path-config" ]; then
-    source "$HOME/.config/shell/path-config"
-fi
 
     # Define which corners to round when drawing the progress bar. If progress_bar_corner_radius
     # is set to 0 this option will be ignored.
