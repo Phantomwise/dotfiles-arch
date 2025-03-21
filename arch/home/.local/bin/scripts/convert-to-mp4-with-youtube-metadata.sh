@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # AI Disclaimer:
-# This script was written with help from a LLM.
+# This script was written with help from GitHub Copilot.
 
 function convert_to_mp4_with_metadata {
     input_file="$1"
