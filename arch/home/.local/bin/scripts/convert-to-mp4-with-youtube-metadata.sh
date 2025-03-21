@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Convert video files to MP4 with metadata from YouTube
+# Does NOT re-encode the video and audio streams, only copies them
+# Usage: Place in $PATH and run from the directory containing the video files to convert
+# Dependencies: yt-dlp, ffmpeg
+
 # AI Disclaimer:
 # This script was written with help from GitHub Copilot.
 
