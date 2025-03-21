@@ -1,3 +1,4 @@
+9991        Battery level --> To change
 98114105    Brightness
 99114103    Charger
 117115066   USB
