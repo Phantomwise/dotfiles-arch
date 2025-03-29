@@ -717,6 +717,10 @@
         default_icon = _warning
         script = "$HOME/.local/bin/scripts/dunst/play-sound-disconnect.sh"
 
+[override-updates]
+        category = updates
+        default_icon = pacman
+
 [override-volume.change]
         category = volume.change
         default_icon = volume-medium
