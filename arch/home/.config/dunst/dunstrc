@@ -721,6 +721,10 @@
         category = updates
         default_icon = pacman
 
+[override-uptime]
+        category = uptime
+        default_icon = clock
+
 [override-volume.change]
         category = volume.change
         default_icon = volume-medium
