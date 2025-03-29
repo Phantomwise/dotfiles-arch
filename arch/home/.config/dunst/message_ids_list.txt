@@ -1,6 +1,6 @@
-9991        Battery level --> To change
-98114105    Brightness
-99114103    Charger
-117112100   Updates
-117115066   USB
-118111108   Volume
+9991            Battery level --> To change
+98114105    bri Brightness
+99114103    crg Charger
+117112100   upd Updates
+117115066   usl USB
+118111108   vol Volume
