@@ -1,0 +1,7 @@
+[Nemo Action]
+Name=Delete __MACOSX Folders
+Comment=Delete all __MACOSX folders in the selected directories
+Exec=/bin/bash -c "find %F -type d -name '__MACOSX' -exec rm -rf {} +"
+Icon-Name=edit-delete
+Selection=any
+Extensions=dir;
