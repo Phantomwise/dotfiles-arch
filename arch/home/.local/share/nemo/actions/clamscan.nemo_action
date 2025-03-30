@@ -5,3 +5,4 @@ Exec=kitty sh -c "clamscan -r %F | less"
 Icon-Name=bug-buddy
 Selection=any
 Extensions=dir;exe;dll;zip;gz;7z;rar;
+Quote=double

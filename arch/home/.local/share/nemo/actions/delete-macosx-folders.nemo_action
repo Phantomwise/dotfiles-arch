@@ -5,3 +5,4 @@ Exec=/bin/bash -c "find %F -type d -name '__MACOSX' -exec rm -rf {} +"
 Icon-Name=edit-delete
 Selection=any
 Extensions=dir;
+Quote=double
