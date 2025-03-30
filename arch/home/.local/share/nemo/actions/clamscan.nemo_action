@@ -1,7 +1,7 @@
 [Nemo Action]
-Name=Clam Scan
+Name=Clam Scan v2
 Comment=Clam Scan
-Exec=kitty sh -c "clamscan -r %F | less"
+Exec=sh -c "$TERMINAL -e sh -c 'clamscan -r %F | less'"
 Icon-Name=bug-buddy
 Selection=any
 Extensions=dir;exe;dll;zip;gz;7z;rar;
