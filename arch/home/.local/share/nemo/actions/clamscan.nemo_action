@@ -1,6 +1,6 @@
 [Nemo Action]
-Name=Clam Scan v2
-Comment=Clam Scan
+Name=Clam Scan
+Comment=Scan with ClamAV
 Exec=sh -c "$TERMINAL -e sh -c 'clamscan -r %F | less'"
 Icon-Name=bug-buddy
 Selection=any
