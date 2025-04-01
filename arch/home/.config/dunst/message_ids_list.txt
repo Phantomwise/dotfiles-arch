@@ -2,5 +2,6 @@
 98114105    bri Brightness
 99114103    crg Charger
 117112100   upd Updates
+117112116   Upt Uptime
 117115066   usl USB
 118111108   vol Volume
