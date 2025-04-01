@@ -293,6 +293,7 @@ output * bg $wallpaper_default fill '#123456'
 # ╚═══════════════════════════════════════════════════════════╝
 
 exec /usr/lib/polkit-kde-authentication-agent-1
+exec ~/.local/bin/scripts/dunst/check-updates.sh
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
