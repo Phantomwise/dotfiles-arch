@@ -292,8 +292,11 @@ output * bg $wallpaper_default fill '#123456'
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
+# Polkit authentication agent
 exec /usr/lib/polkit-kde-authentication-agent-1
+# Check for updates
 exec ~/.local/bin/scripts/dunst/check-updates.sh
+# Synology Drive Client
 exec wrapper-synology-drive-client
 
 # ████████████████████████████████████████████████████████████╗
@@ -302,7 +305,10 @@ exec wrapper-synology-drive-client
 # ████████████████████████████████████████████████████████████║
 # ╚═══════════════════════════════════════════════════════════╝
 
+# Import /etc config
 include /etc/sway/config.d/*
+
+# Import keybindings
 include ~/.config/sway/keybindings
 
 # ████████████████████████████████████████████████████████████╗
