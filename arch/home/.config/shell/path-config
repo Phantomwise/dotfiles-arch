@@ -13,4 +13,4 @@ add_to_path() {
 }
 
 # Add desired directories
-add_to_path "$HOME/Scripts" "$HOME/.local/bin" "$HOME/.local/bin/scripts"
+add_to_path "$HOME/Sync/SynologyDrive/home/Scripts" "$HOME/.local/bin" "$HOME/.local/bin/scripts"
