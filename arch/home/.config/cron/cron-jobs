@@ -2,3 +2,6 @@
 
 # Check the uptime every 12 hours
 0 */12 * * * /home/phantomwise/git/dotfiles/arch/home/.local/bin/scripts/dunst/uptime.sh
+
+# Check for updates every 2 days
+0 20 */2 * * /home/phantomwise/git/dotfiles/arch/home/.local/bin/scripts/dunst/check-updates.sh
