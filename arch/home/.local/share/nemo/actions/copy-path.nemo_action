@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=Copy Path
 Comment=Copy the full path of the selected file or folder to the clipboard
-Exec=echo -n "%F" | wl-copy
+Exec=sh -c 'echo -n "%F" | wl-copy'
 Icon-Name=edit-copy
 Selection=single
 Extensions=any;
