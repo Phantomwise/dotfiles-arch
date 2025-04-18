@@ -13,5 +13,5 @@ fi
 find . -maxdepth 1 -type f -iname "*.mp4" | sort | while IFS= read -r file; do
     # Get the resolution using ffprobe
     resolution=$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "$file")
-    echo "$resolution $file"
-done
+    echo "$resolution,$file"
+done | awk -F, '{ printf "%-2s %-5s %s\n", $1, $2, $3 }'
