@@ -1,1 +1,4 @@
 # Run `crontab ~/.config/cron/cron-jobs` to load this file into crontab
+
+# Check the uptime every 12 hours
+0 */12 * * * /home/phantomwise/git/dotfiles/arch/home/.local/bin/scripts/dunst/uptime.sh
