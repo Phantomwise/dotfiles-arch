@@ -22,6 +22,7 @@
 
 /* To use :
 @import 'global.css';
+@import url("/home/phantomwise/.config/global.css");
 */
 
 /*
@@ -60,8 +61,8 @@
 ╚══════════════════════════════════════════════════════════════╝
 */
 
-/* Main color */
-@define-color color-main #004BAA;
+/* Primary color */
+@define-color color-primary #004BAA;
 
 /* Highlight color */
 @define-color color-highlight #ffbb00;

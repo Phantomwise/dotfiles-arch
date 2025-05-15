@@ -58,7 +58,7 @@ window#waybar {
 	border-top: 2px solid @color-text-on-light;
 	*/
 	color: @color-white;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 
 #workspaces button.urgent {
@@ -134,7 +134,7 @@ window#waybar {
 #network,
 #language {
 	color: @color-white;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 
 #battery {
@@ -168,11 +168,11 @@ window#waybar {
 
 #temperature {
 	color: @color-white;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 #temperature.critical {
     color: @color-urgent;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 
 #cpu {
@@ -198,23 +198,23 @@ window#waybar {
 
 #memory {
 	color: @color-white;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 #memory.low {
 	color: @color-white;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 #memory.medium {
     color: @color-yellow;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 #memory.high {
     color: @color-urgent;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 #memory.critical {
     color: @color-urgent;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 
 #disk {
@@ -281,11 +281,11 @@ window#waybar {
 #custom-left-arrow-light-dark,
 #custom-right-arrow-dark-light {
 	color: @color-black;
-	background-color: @color-main;
+	background-color: @color-primary;
 }
 #custom-left-arrow-dark-light,
 #custom-right-arrow-light-dark {
-	color: @color-main;
+	color: @color-primary;
 	background-color: @color-black;
 }
 
@@ -296,7 +296,7 @@ window#waybar {
 }
 #custom-left-arrow-transparent-light,
 #custom-right-arrow-light-transparent {
-	color: @color-main;
+	color: @color-primary;
 	background: transparent;
 }
 #custom-left-arrow-dark-transparent,
@@ -307,7 +307,7 @@ window#waybar {
 #custom-left-arrow-light-transparent,
 #custom-right-arrow-transparent-light {
 	color: transparent;
-	background: @color-main;
+	background: @color-primary;
 }
 
 /*
@@ -339,7 +339,7 @@ window#waybar {
 #custom-left-arrow-battery,
 #custom-right-arrow-battery {
     font-size: 18px;
-    color: @color-main;
+    color: @color-primary;
     background-color: @color-black;
 }
 */
