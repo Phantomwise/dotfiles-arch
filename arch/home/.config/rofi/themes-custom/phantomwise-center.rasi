@@ -24,6 +24,17 @@
 @theme "/home/phantomwise/.config/global.css"
 */
 
+// Colours
+* {
+    // background-color:            transparent;
+    // background:                  #111111;
+    // background-transparent:      #111111A0;
+    text-color:                     #FFFFFF;
+    text-color-selected:            #FFFFFF;
+    color-primary:                  #004BAA;
+    important:                      #004BAA;
+}
+
 * {
     background-color:            #000000;
     border-color:                #004baa;
@@ -46,7 +57,7 @@
 #window {
     border:       2;
     padding:      5;
-    border-color: #004baa;
+    border-color: @color-primary;
 }
 #mainbox {
     border:  0;
