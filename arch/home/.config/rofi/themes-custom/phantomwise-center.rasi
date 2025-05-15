@@ -44,8 +44,9 @@
     spacing:                     3;
 }
 #window {
-    border:  2;
-    padding: 5;
+    border:       2;
+    padding:      5;
+    border-color: #004baa;
 }
 #mainbox {
     border:  0;
