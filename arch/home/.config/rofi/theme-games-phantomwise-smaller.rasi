@@ -1,4 +1,4 @@
-@import "games-default"
+@import "theme-games-phantomwise-large"
 
 window {
     fullscreen:                     false;

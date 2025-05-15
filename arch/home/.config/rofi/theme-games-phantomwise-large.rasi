@@ -1,12 +1,12 @@
 // Colours
 * {
     background-color:               transparent;
-    background:                     #1D2330;
-    background-transparent:         #1D2330A0;
-    text-color:                     #BBBBBB;
+    background:                     #111111;
+    background-transparent:         #111111A0;
+    text-color:                     #FFFFFF;
     text-color-selected:            #FFFFFF;
-    primary:                        #BB77BB;
-    important:                      #BF616A;
+    primary:                        #004BAA;
+    important:                      #004BAA;
 }
 
 configuration {
