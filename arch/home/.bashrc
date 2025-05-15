@@ -129,6 +129,9 @@ fi
 # Set ksshaskpass for askpass because the regular sshaskpass package is X11 only >_<
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
+# Set qt theme
+export QT_QPA_PLATFORMTHEME=qt6ct
+
 # ███████████████████████████████████████████████████████████████╗
 # █╔════════════════════════════════════════════════════════════█║
 # █║░░░░░░░░░░░░░░░░░░░░░░░░░░░ END ░░░░░░░░░░░░░░░░░░░░░░░░░░░░█║
