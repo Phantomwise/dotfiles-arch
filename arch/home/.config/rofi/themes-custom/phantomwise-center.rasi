@@ -41,10 +41,6 @@
     text-color:                  #bbc2cf;
     font:                        "dungeon 12";
     prompt-font:                 "dungeon 12";
-/*
-    font:                        "Ubuntu Mono 11";
-    prompt-font:                 "Ubuntu Bold 10";
-*/
     prompt-background:           #004baa;
     prompt-foreground:           #ffffff;
     prompt-padding:              4px;
