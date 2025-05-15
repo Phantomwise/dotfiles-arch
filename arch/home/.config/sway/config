@@ -122,7 +122,7 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
 # ╚═══════════════════════════════════════════════════════════╝
 
 # window corner radius in px
-corner_radius 0
+# corner_radius 0 # SwayFX option
 
 gaps inner 10
 # gaps inner|outer|horizontal|vertical|top|right|bottom|left <amount>
@@ -135,25 +135,25 @@ gaps inner 10
 # exec /usr/share/sway-contrib/inactive-windows-transparency.py --opacity 0.50
 
 # Window background blur
-blur off
-blur_xray off
-# blur_passes 2
-# blur_radius 5
+# blur off # SwayFX option
+# blur_xray off # SwayFX option
+# blur_passes 2 # SwayFX option
+# blur_radius 5 # SwayFX option
 
-shadows off
-shadows_on_csd off
-# shadow_blur_radius 20
-# shadow_color #0000007F
+# shadows off # SwayFX option
+# shadows_on_csd off # SwayFX option
+# shadow_blur_radius 20 # SwayFX option
+# shadow_color #0000007F # SwayFX option
 
 # inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
-default_dim_inactive 0.25
-dim_inactive_colors.unfocused #00000000
-# dim_inactive_colors.unfocused #222222FF
-# dim_inactive_colors.unfocused #000000FF
-dim_inactive_colors.urgent $rgba-red
+# default_dim_inactive 0.25 # SwayFX option
+# dim_inactive_colors.unfocused #00000000 # SwayFX option
+# dim_inactive_colors.unfocused #222222FF # SwayFX option
+# dim_inactive_colors.unfocused #000000FF # SwayFX option
+# dim_inactive_colors.urgent $rgba-red # SwayFX option
 
 # Move minimized windows into Scratchpad (enable|disable)
-scratchpad_minimize disable
+# scratchpad_minimize disable # SwayFX option
 
 # Colors
 # class title_border_color title_background_color title_text_color indicator_color child_border_color
