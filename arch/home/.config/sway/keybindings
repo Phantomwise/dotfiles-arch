@@ -76,7 +76,8 @@ set $calc rofi -show calc -no-show-match -no-sort
 set $powermenu rofi -show power-menu -modi power-menu:rofi-power-menu
     # NB: located in /home/phantomwise/Scripts/rofi-power-menu
     # NB: copy not in use in /home/phantomwise/Scripts/rofi-power-menu
-set $games rofi -modi games -show games -theme games-default
+set $gamesl rofi -modi games -show games -theme theme-games-phantomwise-large
+set $gamess rofi -modi games -show games -theme theme-games-phantomwise-small
 
 # ████████████████████████████████████████████████████████████╗
 # █╔═════════════════════════════════════════════════════════█║
@@ -130,7 +131,8 @@ bindsym $mod+b exec $filebrowsermenu
 bindsym $mod+s exec $sshmenu
 bindsym $mod+m exec $emoji
 bindsym $mod+c exec $calc
-bindsym $mod+g exec $games
+bindsym $mod+g exec $gamess
+bindsym $mod+Shift+g exec $gamesl
 # bindsym $mod+l exec $powermenu
 bindsym Alt+Tab exec $windowmenu
 
