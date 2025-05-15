@@ -36,7 +36,7 @@
 	min-height: 0;
 }
 
-@import 'global.css';
+@import url("/home/phantomwise/.config/global.css");
 /*
 Replaces
 @import url("/home/phantomwise/.config/global.css");
