@@ -10,7 +10,7 @@
 }
 
 configuration {
-    font:                           "Roboto 17";
+    font:                           "dungeon 15";
     show-icons:                     true;
 }
 
@@ -22,6 +22,7 @@ window {
     background-color:               @background-transparent;
     border:                         0px 0px 0px 0px;
     border-color:                   @primary;
+    border-radius:                  0px;
 }
 
 mainbox {
@@ -40,7 +41,7 @@ listview {
     layout:                         vertical;
     padding:                        60px;
     dynamic:                        true;
-    columns:                        7;
+    columns:                        8;
     spacing:                        20px;
 }
 
@@ -54,7 +55,7 @@ inputbar {
     children:                       [textbox-prompt, entry];
     margin:                         0px;
     background-color:               @primary;
-    border:                         4px;
+    border:                         3px;
     border-color:                   @primary;
     border-radius:                  8px;
 }
@@ -83,7 +84,7 @@ element {
     children:                       [dummy, element-box, dummy];
     padding:                        5px;
     orientation:                    vertical;
-    border:                         0px 4px solid 0px 4px;
+    border:                         0px 3px solid 0px 3px;
     border-color:                   transparent;
     border-radius:                  16;
 }
@@ -102,7 +103,7 @@ element-box {
 element-icon {
     padding:                        10px;
     cursor:                         inherit;
-    size:                           33%;
+    size:                           25%;
     margin:                         10px;
 }
 

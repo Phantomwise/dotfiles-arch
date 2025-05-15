@@ -3,15 +3,15 @@
 window {
     fullscreen:                     false;
     border-radius:                  10px;
-    height:                         50%;
-    width:                          50%;
-    border:                         2px 2px 2px 2px;
+    height:                         70%;
+    width:                          80%;
+    border:                         3px 3px 3px 3px;
     border-color:                   @primary;
     border-radius:                  0px;
 }
 
 listview {
-    columns:                        5;
+    columns:                        8;
     padding:                        30px;
 }
 
