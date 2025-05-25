@@ -19,9 +19,13 @@ monitor_and_sync() {
     echo -e "${yellow}Monitoring $src for changes...${reset}"
     while inotifywait -r -e modify,create,delete,move "$src"; do
         echo -e "${yellow}Change detected in $src. Syncing to $dst...${reset}"
-        rsync -av --delete-delay "$src/" "$dst/"
-        echo -e "${green}Sync complete for $src -> $dst.${reset}"
-        notify-send "Sync Complete" "Synced $src to $dst"
+        if rsync -av --delete-delay "$src/" "$dst/"; then
+            echo -e "${green}Sync complete for $src -> $dst.${reset}"
+            notify-send "Sync Complete" "Synced $src to $dst"
+        else
+            echo -e "${red}Sync failed for $src -> $dst.${reset}"
+            notify-send "Sync Failed" "Failed to sync $src to $dst"
+        fi
     done
 }
 
@@ -61,8 +65,13 @@ grep -vE '^\s*#|^\s*$' "$DIR_PATH" | while IFS=":" read -r src dst; do
 
             # Perform an initial sync once both are available
             echo -e "${yellow}Performing initial sync for $src -> $dst...${reset}"
-            rsync -av --delete-delay "$src/" "$dst/"
+        if rsync -av --delete-delay "$src/" "$dst/"; then
             echo -e "${green}Initial sync complete for $src -> $dst.${reset}"
+            notify-send "Initial Sync Complete" "Synced $src to $dst"
+        else
+            echo -e "${red}Sync failed for $src -> $dst.${reset}"
+            notify-send "Initial Sync Failed" "Failed to sync $src to $dst"
+        fi
 
             # Start monitoring and syncing in the background
             monitor_and_sync "$src" "$dst" &
@@ -72,8 +81,13 @@ grep -vE '^\s*#|^\s*$' "$DIR_PATH" | while IFS=":" read -r src dst; do
 
     # Perform an initial sync if both paths are available
     echo -e "${yellow}Performing initial sync for $src -> $dst...${reset}"
-    rsync -av --delete-delay "$src/" "$dst/"
-    echo -e "${green}Initial sync complete for $src -> $dst.${reset}"
+    if rsync -av --delete-delay "$src/" "$dst/"; then
+        echo -e "${green}Initial sync complete for $src -> $dst.${reset}"
+        notify-send "Initial Sync Complete" "Synced $src to $dst"
+    else
+        echo -e "${red}Sync failed for $src -> $dst.${reset}"
+        notify-send "Initial Sync Failed" "Failed to sync $src to $dst"
+    fi
 
     # Start monitoring and syncing in the background
     monitor_and_sync "$src" "$dst" &
