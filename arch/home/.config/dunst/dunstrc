@@ -725,6 +725,14 @@
         category = uptime
         default_icon = clock
 
+[override-sync.fail]
+        category = sync.fail
+        default_icon = sync
+
+[override-sync.succeed]
+        category = sync.succeed
+        default_icon = sync-error
+
 [override-volume.change]
         category = volume.change
         default_icon = volume-medium
