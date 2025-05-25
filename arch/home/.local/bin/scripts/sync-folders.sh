@@ -21,10 +21,18 @@ monitor_and_sync() {
         echo -e "${yellow}Change detected in $src. Syncing to $dst...${reset}"
         if rsync -av --delete-delay "$src/" "$dst/"; then
             echo -e "${green}Sync complete for $src -> $dst.${reset}"
-            notify-send "Sync Complete" "Synced $src to $dst"
+            # Send notification with dunstify if available, otherwise use notify-send
+            if ! dunstify "Sync Complete" "Synced $src to $dst"
+            then
+                notify-send "Sync Complete" "Synced $src to $dst"
+            fi
         else
             echo -e "${red}Sync failed for $src -> $dst.${reset}"
-            notify-send "Sync Failed" "Failed to sync $src to $dst"
+            # Send notification with dunstify if available, otherwise use notify-send
+            if ! dunstify "Sync Failed" "Failed to sync $src to $dst"
+            then
+                notify-send "Sync Failed" "Failed to sync $src to $dst"
+            fi
         fi
     done
 }
@@ -37,10 +45,18 @@ initial_sync() {
     echo -e "${yellow}Performing initial sync for $src -> $dst...${reset}"
     if rsync -av --delete-delay "$src/" "$dst/"; then
         echo -e "${green}Initial sync complete for $src -> $dst.${reset}"
-        notify-send "Initial Sync Complete" "Synced $src to $dst"
+        # Send notification with dunstify if available, otherwise use notify-send
+        if ! dunstify "Initial Sync Complete" "Synced $src to $dst"
+        then
+            notify-send "Initial Sync Complete" "Synced $src to $dst"
+        fi
     else
         echo -e "${red}Sync failed for $src -> $dst.${reset}"
-        notify-send "Initial Sync Failed" "Failed to sync $src to $dst"
+        # Send notification with dunstify if available, otherwise use notify-send
+        if ! dunstify "Initial Sync Failed" "Failed to sync $src to $dst"
+        then
+            notify-send "Initial Sync Failed" "Failed to sync $src to $dst"
+        fi
     fi
 }
 
