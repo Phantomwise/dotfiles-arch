@@ -16,7 +16,7 @@ monitor_and_sync() {
     local src=$1
     local dst=$2
 
-    echo -e "Monitoring $src for changes..."
+    echo -e "${yellow}Monitoring $src for changes...${reset}"
     while inotifywait -r -e modify,create,delete,move "$src"; do
         echo -e "${yellow}Change detected in $src. Syncing to $dst...${reset}"
         rsync -av --delete "$src/" "$dst/"
@@ -60,7 +60,7 @@ grep -vE '^\s*#|^\s*$' "$DIR_PATH" | while IFS=":" read -r src dst; do
             echo -e "${green}Both source $src and destination $dst are now available. Continuing...${reset}"
 
             # Perform an initial sync once both are available
-            echo -e "Performing initial sync for $src -> $dst..."
+            echo -e "${yellow}Performing initial sync for $src -> $dst...${reset}"
             rsync -av --delete "$src/" "$dst/"
             echo -e "${green}Initial sync complete for $src -> $dst.${reset}"
 
@@ -71,9 +71,9 @@ grep -vE '^\s*#|^\s*$' "$DIR_PATH" | while IFS=":" read -r src dst; do
     fi
 
     # Perform an initial sync if both paths are available
-    echo -e "Performing initial sync for $src -> $dst..."
+    echo -e "${yellow}Performing initial sync for $src -> $dst...${reset}"
     rsync -av --delete "$src/" "$dst/"
-    echo -e "Initial sync complete for $src -> $dst."
+    echo -e "${green}Initial sync complete for $src -> $dst.${reset}"
 
     # Start monitoring and syncing in the background
     monitor_and_sync "$src" "$dst" &
