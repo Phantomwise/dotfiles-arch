@@ -21,6 +21,7 @@ monitor_and_sync() {
         echo -e "${yellow}Change detected in $src. Syncing to $dst...${reset}"
         rsync -av --delete "$src/" "$dst/"
         echo -e "${green}Sync complete for $src -> $dst.${reset}"
+        notify-send "Sync Complete" "Synced $src to $dst"
     done
 }
 
