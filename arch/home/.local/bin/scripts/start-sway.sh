@@ -31,5 +31,8 @@ export SDL_VIDEODRIVER=wayland
 # Set XDG_CURRENT_DESKTOP when using Sway
 export XDG_CURRENT_DESKTOP=sway
 
+# Set qt theme
+export QT_QPA_PLATFORMTHEME=qt6ct
+
 # redirect stdout/stderr to a log file
 exec sway > ~/.cache/sway.log 2>&1
