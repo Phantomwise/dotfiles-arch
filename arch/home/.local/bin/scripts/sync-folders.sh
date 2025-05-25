@@ -9,7 +9,7 @@ green='\033[92m'  # Green color for success messages
 reset='\033[0m'   # Reset formatting
 
 # File containing the paths to monitor and sync
-DIR_PATH="$HOME/Sync/SynologyDrive/home/Secrets/sync-paths.txt"
+DIR_PATH="$HOME/Secrets/sync-paths.txt"
 
 # Function to monitor and sync a single source-destination pair
 monitor_and_sync() {
