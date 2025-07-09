@@ -37,5 +37,9 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 # Force Sway to use Intel GPU
 export WLR_DRM_DEVICES=/dev/dri/card1
 
+# Offload rendering to Nvidia GPU
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
 # redirect stdout/stderr to a log file
 exec sway > ~/.cache/sway.log 2>&1
