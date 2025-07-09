@@ -34,5 +34,8 @@ export XDG_CURRENT_DESKTOP=sway
 # Set qt theme
 export QT_QPA_PLATFORMTHEME=qt6ct
 
+# Force Sway to use Intel GPU
+export WLR_DRM_DEVICES=/dev/dri/card1
+
 # redirect stdout/stderr to a log file
 exec sway > ~/.cache/sway.log 2>&1
