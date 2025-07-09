@@ -309,12 +309,19 @@ mode "resize" {
 	# ███████████████████████████████████████████████████████████████║
 	# ╚══════════════════════════════════════════════════════════════╝
 
+# Change volume with volume keys
 bindsym XF86AudioRaiseVolume exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%+; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
 bindsym XF86AudioLowerVolume exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%-; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
 bindsym Shift+XF86AudioRaiseVolume exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 100%; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
 bindsym Shift+XF86AudioLowerVolume exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 0%; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
 bindsym XF86AudioMute exec bash -c 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; bash $HOME/.local/bin/scripts/dunst/volume-mute.sh'
-# Add mute/unmute script
+
+# Change volume with mod + F keys
+bindsym $mod+F3 exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%+; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
+bindsym $mod+F2 exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%-; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
+bindsym $mod+Shift+F3 exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 100%; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
+bindsym $mod+Shift+F2 exec bash -c 'wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 0%; bash $HOME/.local/bin/scripts/dunst/volume-change.sh'
+bindsym $mod+F1 exec bash -c 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; bash $HOME/.local/bin/scripts/dunst/volume-mute.sh'
 
 	# ███████████████████████████████████████████████████████████████╗
 	# █╔════════════════════════════════════════════════════════════█║
@@ -333,9 +340,11 @@ bindsym Ctrl+XF86AudioRaiseVolume exec brightnessctl set 5%+ && exec $HOME/.loca
 bindsym Ctrl+XF86AudioLowerVolume exec brightnessctl set 5%- && exec $HOME/.local/bin/scripts/dunst/brightness.sh
 bindsym Ctrl+XF86AudioMute exec brightnessctl set 50% && exec $HOME/.local/bin/scripts/dunst/brightness.sh
 
-# Change brightness with mod + F10/F11
-bindsym $mod+F11 exec brightnessctl set 5%+ && exec $HOME/.local/bin/scripts/dunst/brightness.sh
-bindsym $mod+F10 exec brightnessctl set 5%- && exec $HOME/.local/bin/scripts/dunst/brightness.sh
+# Change brightness with mod + F keys
+bindsym $mod+F10 exec brightnessctl set 5%+ && exec $HOME/.local/bin/scripts/dunst/brightness.sh
+bindsym $mod+F9 exec brightnessctl set 5%- && exec $HOME/.local/bin/scripts/dunst/brightness.sh
+bindsym $mod+Shift+F10 exec brightnessctl set 100% && exec $HOME/.local/bin/scripts/dunst/brightness.sh
+bindsym $mod+Shift+F9 exec brightnessctl set 0% && exec $HOME/.local/bin/scripts/dunst/brightness.sh
 
 	# ███████████████████████████████████████████████████████████████╗
 	# █╔════════════════════════════════════════════════════════════█║
