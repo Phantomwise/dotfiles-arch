@@ -10,8 +10,6 @@ HOME_DIR := /home/phantomwise
 TARGET ?= all
 
 # Include modular Makefile parts
-# include nix-cleanup.mk
-# include nix-update.mk
 
 # restow
 restow:
