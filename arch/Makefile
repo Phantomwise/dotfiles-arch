@@ -10,6 +10,7 @@ HOME_DIR := /home/phantomwise
 TARGET ?= all
 
 # Include modular Makefile parts
+include rclone.mk
 
 # restow
 restow:
