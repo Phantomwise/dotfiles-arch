@@ -104,6 +104,28 @@ bindsym $mod+Shift+m exec swaynag -t warning -m 'You pressed the exit shortcut. 
 
 	# ███████████████████████████████████████████████████████████████╗
 	# █╔════════════════════════════════════════════════════════════█║
+	# █║░░░░░░░░░░░░░░░░░░░░░░░░ KEYS REMAP ░░░░░░░░░░░░░░░░░░░░░░░░█║
+	# ███████████████████████████████████████████████████████████████║
+	# ╚══════════════════════════════════════════════════════════════╝
+
+# Remap Shift+PageUp to Home
+# bindsym Shift+Page_Up exec "swaymsg input '*' send_key Home"
+# bindsym Shift+Page_Up exec sudo ydotool key 102:1 102:0
+# bindsym Shift+Page_Up exec sh -c 'ydotool key 102:1 102:0'
+
+# Remap Shift+PageDown to End
+# bindsym Shift+Page_Down exec "swaymsg input '*' send_key End"
+# bindsym Shift+Page_Down exec ydotool key 107:1 107:0
+# bindsym Shift+Page_Down exec sh -c 'ydotool key 107:1 107:0'
+
+# bindsym Shift+Page_Up exec notify-send "Shift+PageUp pressed"
+
+# bindsym Shift+Page_Up exec sh -c '/usr/bin/ydotool key 102:1 102:0'
+# bindsym Shift+Page_Down exec sh -c '/usr/bin/ydotool key 107:1 107:0'
+
+
+	# ███████████████████████████████████████████████████████████████╗
+	# █╔════════════════════════════════════════════════════════════█║
 	# █║░░░░░░░░░░░░░░░░░░░░░░░ APPLICATIONS ░░░░░░░░░░░░░░░░░░░░░░░█║
 	# ███████████████████████████████████████████████████████████████║
 	# ╚══════════════════════════════════════════════════════════════╝
