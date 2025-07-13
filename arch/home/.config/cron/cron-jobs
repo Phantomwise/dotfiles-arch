@@ -10,3 +10,10 @@
 
 # Check for updates every 2 days
 0 20 */2 * * /home/phantomwise/git/dotfiles/arch/home/.local/bin/scripts/dunst/check-updates.sh
+
+# Sync to NAS with rclone every 30 minutes
+# */30 * * * * rclone sync /home/phantomwise/Sync/SynologyDrive NAS:personal/Sync/Dell-Precision-7530-Arch-Rclone
+# Sync to NAS with rclone and send notification every 30 minutes
+# */30 * * * * rclone sync -v /home/phantomwise/Sync/SynologyDrive NAS:personal/Sync/Dell-Precision-7530-Arch-Rclone 2>&1 | notify-send "Rclone Sync"
+# Sync to NAS with rclone and send notification every 30 minutes
+*/30 * * * * notify-send "Rclone Sync" "$(rclone sync -v /home/phantomwise/Sync/SynologyDrive NAS:personal/Sync/Dell-Precision-7530-Arch-Rclone 2>&1 | tail -n 4 | head -n 1)"
